@@ -448,7 +448,7 @@ const Index = () => {
           <FeatureCard icon={Globe} title="Ajout d'informations" description="Vos clients ajoutent les détails dont vous avez besoin." />
           <FeatureCard icon={Camera} title="Photos et vidéos" description="Vos clients envoient directement les visuels du chantier." />
           <FeatureCard icon={Zap} title="Structuration automatique" description="Le dossier se construit tout seul à partir des infos reçues." />
-          <FeatureCard icon={FileText} title="Aide au devis" description="L'IA vous aide à préparer vos propositions plus vite." />
+          <FeatureCard icon={Brain} title="Analyse intelligente" description="L'IA analyse photos, notes vocales et devis pour générer listes de matériel et suggestions." />
           <FeatureCard icon={Calendar} title="Gestion de rendez-vous" description="Proposez et gérez vos RDV directement depuis Bulbiz." />
           <FeatureCard icon={Bell} title="Relances" description="Ne laissez plus filer un devis sans relance." />
           <FeatureCard icon={Eye} title="Suivi plus clair" description="Vue d'ensemble de tous vos dossiers en cours." />
