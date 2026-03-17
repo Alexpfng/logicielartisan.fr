@@ -63,7 +63,7 @@ const LogicielBtp = () => {
             <p>L'outil s'adapte à chaque métier grâce à son approche universelle : <strong className="text-foreground">un lien unique pour centraliser toutes les demandes</strong>, quel que soit le canal d'entrée.</p>
             <p>Les fonctionnalités clés pour le BTP :</p>
             <ul className="space-y-2 ml-4">
-              {["Centralisation multi-canal des demandes", "Photos et vidéos de chantier rattachées aux dossiers", "Suivi des dossiers en cours", "Aide à la préparation de devis", "Gestion des rendez-vous terrain", "Relances automatiques"].map(item => (
+              {["Centralisation multi-canal des demandes", "Photos et vidéos de chantier rattachées aux dossiers", "Suivi des dossiers en cours", "Analyse IA des photos et vocaux pour listes de matériel", "Gestion des rendez-vous terrain", "Relances automatiques"].map(item => (
                 <li key={item} className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                   {item}

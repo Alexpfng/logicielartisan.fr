@@ -61,7 +61,7 @@ const ApplicationArtisan = () => {
           <div className="text-muted-foreground space-y-4 text-body-lg mb-12">
             <p>Bulbiz est une application conçue mobile-first pour les artisans. Tout est accessible depuis votre téléphone :</p>
             <ul className="space-y-2 ml-4">
-              {["Réception des demandes clients", "Consultation des dossiers", "Gestion des rendez-vous", "Suivi des devis et relances", "Photos et documents liés aux chantiers"].map(item => (
+              {["Réception des demandes clients", "Consultation des dossiers", "Gestion des rendez-vous", "Suivi des demandes et relances", "Photos et documents liés aux chantiers"].map(item => (
                 <li key={item} className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                   {item}

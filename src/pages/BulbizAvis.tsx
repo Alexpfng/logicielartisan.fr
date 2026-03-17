@@ -57,7 +57,7 @@ const BulbizAvis = () => {
               <h3 className="font-semibold text-foreground text-lg">Ce qu'on aime</h3>
             </div>
             <ul className="space-y-3">
-              {["Pensée pour le terrain, pas pour le bureau", "Centralisation simple et intuitive des demandes", "Logique mobile-first vraiment aboutie", "Approche concrète, pas de jargon technique", "Amélioration continue et écoute des utilisateurs", "Expérience plus fluide et professionnelle pour l'artisan", "IA utile et orientée métier", "Formulaire client clair et complet"].map(item => (
+              {["Pensée pour le terrain, pas pour le bureau", "Centralisation simple et intuitive des demandes", "Logique mobile-first vraiment aboutie", "Approche concrète, pas de jargon technique", "Amélioration continue et écoute des utilisateurs", "Expérience plus fluide et professionnelle pour l'artisan", "IA qui analyse photos et vocaux pour suggérer le matériel", "Formulaire client clair et complet"].map(item => (
                 <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
                   <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                   {item}

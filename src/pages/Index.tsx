@@ -450,7 +450,7 @@ const Index = () => {
           <FeatureCard icon={Zap} title="Structuration automatique" description="Le dossier se construit tout seul à partir des infos reçues." />
           <FeatureCard icon={Brain} title="Analyse intelligente" description="L'IA analyse photos, notes vocales et devis pour générer listes de matériel et suggestions." />
           <FeatureCard icon={Calendar} title="Gestion de rendez-vous" description="Proposez et gérez vos RDV directement depuis Bulbiz." />
-          <FeatureCard icon={Bell} title="Relances" description="Ne laissez plus filer un devis sans relance." />
+          <FeatureCard icon={Bell} title="Relances" description="Ne laissez plus filer une demande sans relance." />
           <FeatureCard icon={Eye} title="Suivi plus clair" description="Vue d'ensemble de tous vos dossiers en cours." />
         </div>
       </SectionWrapper>
