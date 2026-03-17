@@ -357,7 +357,7 @@ const Index = () => {
               { step: "1", label: "Réception de la demande", desc: "Le client remplit le formulaire depuis votre lien" },
               { step: "2", label: "Dossier structuré", desc: "Toutes les infos sont organisées automatiquement" },
               { step: "3", label: "Suivi plus clair", desc: "Vous voyez tout en un coup d'œil" },
-              { step: "4", label: "Devis facilité", desc: "L'IA vous aide à préparer vos propositions" },
+              { step: "4", label: "Liste matériel générée", desc: "L'IA analyse photos et infos pour suggérer le matériel nécessaire" },
               { step: "5", label: "Rendez-vous mieux organisés", desc: "Planifiez directement depuis le dossier" },
             ].map(item => (
               <div key={item.step} className="flex items-start gap-4">
