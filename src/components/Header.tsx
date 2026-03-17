@@ -66,7 +66,7 @@ const Header = () => {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <CTAButton variant="secondary" size="default">Découvrir Bulbiz</CTAButton>
+          <CTAButton variant="secondary" size="default">Découvrir la solution</CTAButton>
           <CTAButton variant="primary" size="default">Tester gratuitement</CTAButton>
         </div>
 
@@ -106,7 +106,7 @@ const Header = () => {
             ))}
             <div className="flex flex-col gap-3 pt-4 border-t border-border">
               <CTAButton variant="primary" size="lg">Tester gratuitement</CTAButton>
-              <CTAButton variant="secondary" size="lg">Découvrir Bulbiz</CTAButton>
+              <CTAButton variant="secondary" size="lg">Découvrir la solution</CTAButton>
             </div>
           </div>
         </div>

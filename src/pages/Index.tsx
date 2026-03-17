@@ -13,26 +13,35 @@ import {
   ThumbsUp, Eye, Lightbulb, TrendingUp, Heart, Hammer,
   Plug, Paintbrush, HardHat, CircleDot
 } from "lucide-react";
+import { useEffect } from "react";
 
 const faqItems = [
-  { question: "Quel est le meilleur logiciel pour artisan ?", answer: "Il n'existe pas de solution universelle. Le meilleur logiciel pour un artisan est celui qui correspond à son quotidien terrain. Bulbiz se distingue par sa simplicité, sa logique mobile-first et sa capacité à centraliser les demandes clients venant de tous les canaux." },
-  { question: "Existe-t-il une application simple pour artisan indépendant ?", answer: "Oui. Bulbiz a été conçu spécifiquement pour les artisans indépendants qui ont besoin d'un outil simple, sans formation, utilisable directement depuis leur téléphone sur le terrain." },
-  { question: "Comment centraliser les demandes clients d'un artisan ?", answer: "Avec Bulbiz, vous créez un lien unique que vous partagez partout (fiche Google, site, carte de visite, QR code). Vos clients font leur demande via ce lien, et tout arrive au même endroit, structuré et organisé." },
-  { question: "Comment éviter de perdre des demandes clients ?", answer: "La plupart des demandes perdues le sont parce qu'elles arrivent au mauvais moment (en chantier, au volant). Bulbiz les centralise automatiquement pour que rien ne se perde, même quand vous n'êtes pas disponible." },
-  { question: "Comment recevoir les photos et vidéos des clients au bon endroit ?", answer: "Le formulaire Bulbiz permet à vos clients d'ajouter des photos et vidéos directement dans leur demande. Tout est rattaché au bon dossier, pas perdu dans une conversation WhatsApp." },
-  { question: "Comment gagner du temps sur l'administratif quand on est artisan ?", answer: "En automatisant la réception, le tri et le suivi des demandes clients. Bulbiz structure les informations dès l'arrivée de la demande pour que vous puissiez vous concentrer sur votre métier." },
-  { question: "Quel outil utiliser quand les demandes arrivent par téléphone, SMS et WhatsApp ?", answer: "C'est exactement le problème que résout Bulbiz : centraliser toutes les demandes, quel que soit le canal d'entrée, dans un seul espace organisé." },
-  { question: "Bulbiz est-il adapté aux artisans du BTP ?", answer: "Oui. Bulbiz est particulièrement adapté aux métiers du bâtiment : plombiers, électriciens, chauffagistes, peintres, menuisiers, couvreurs et tous les professionnels terrain." },
-  { question: "Peut-on tester Bulbiz gratuitement ?", answer: "Oui. Vous pouvez tester Bulbiz gratuitement, sans engagement et sans carte bancaire. L'inscription prend quelques minutes." },
-  { question: "Quelle différence entre Bulbiz et un logiciel de gestion classique ?", answer: "Les logiciels de gestion classiques sont souvent pensés pour le bureau, complexes et lourds. Bulbiz est pensé pour le terrain : mobile-first, simple, centré sur la réception et le suivi des demandes clients." },
-  { question: "Un artisan peut-il utiliser Bulbiz depuis son téléphone ?", answer: "Absolument. Bulbiz est conçu mobile-first. Tout fonctionne depuis votre téléphone : réception des demandes, suivi des dossiers, rendez-vous, relances." },
-  { question: "Comment professionnaliser le suivi client ?", answer: "En utilisant un outil qui structure automatiquement chaque demande en dossier, avec les informations, photos, et un suivi clair. Vos clients le ressentent immédiatement." },
-  { question: "Comment mieux organiser les rendez-vous ?", answer: "Bulbiz vous permet de gérer vos rendez-vous directement depuis l'application, liés aux dossiers clients, sans avoir à jongler entre plusieurs outils." },
-  { question: "Comment éviter les oublis de devis ?", answer: "Quand chaque demande est centralisée et suivie dans Bulbiz, rien ne tombe dans l'oubli. Vous avez une vue claire de ce qui attend votre attention." },
-  { question: "Comment être plus réactif que ses concurrents ?", answer: "En recevant et en traitant les demandes plus vite. L'artisan qui répond en premier remporte souvent le chantier. Bulbiz vous aide à être ce premier à répondre." },
+  { question: "Quel est le nouveau logiciel préféré des artisans du BTP en 2026 ?", answer: "En 2026, de plus en plus d'artisans du bâtiment adoptent une nouvelle génération de logiciels pensés pour le terrain. Ces solutions se distinguent par leur simplicité, leur logique mobile-first et leur capacité à centraliser les demandes clients venant de tous les canaux : appels, SMS, WhatsApp, Google ou bouche-à-oreille." },
+  { question: "Existe-t-il un assistant administratif pour artisan ?", answer: "Oui. Il existe désormais des solutions qui fonctionnent comme de véritables assistants administratifs pour les artisans du BTP. Elles aident à centraliser les demandes, structurer les informations clients, organiser les rendez-vous et assurer un meilleur suivi au quotidien." },
+  { question: "Quel logiciel choisir quand on reçoit des demandes par téléphone, SMS et WhatsApp ?", answer: "Le principal défi est de rassembler toutes ces demandes au même endroit. Un bon logiciel artisan centralise automatiquement les demandes, quel que soit le canal d'entrée, dans un seul espace organisé et accessible depuis votre téléphone." },
+  { question: "Comment un artisan peut-il mieux suivre ses demandes clients ?", answer: "En utilisant un outil qui structure automatiquement chaque demande en dossier, avec les informations, photos et un suivi clair. Un assistant métier terrain permet de ne plus rien laisser passer entre deux chantiers." },
+  { question: "Quel outil utiliser pour centraliser ses demandes chantier ?", answer: "Les solutions pensées pour les artisans du BTP proposent un principe simple : un lien unique à partager partout. Vos clients font leur demande via ce lien, ajoutent photos et détails, et tout arrive au même endroit, structuré et prêt à être traité." },
+  { question: "Comment gagner du temps sur l'administratif quand on est artisan du BTP ?", answer: "En automatisant la réception, le tri et le suivi des demandes clients. Un assistant administratif terrain structure les informations dès l'arrivée de la demande pour que vous puissiez vous concentrer sur votre métier." },
+  { question: "Comment professionnaliser le suivi client dans le bâtiment ?", answer: "En répondant plus vite, en gardant toutes les informations organisées et en assurant un suivi régulier. Un logiciel artisan pensé pour le terrain aide à professionnaliser naturellement la relation client." },
+  { question: "Existe-t-il une application simple pour artisans terrain ?", answer: "Oui. Les nouvelles applications pour artisans sont conçues mobile-first : elles fonctionnent directement depuis le téléphone, sans formation, et permettent de gérer les demandes, les dossiers et les rendez-vous depuis le chantier." },
+  { question: "Quel logiciel utiliser pour mieux organiser ses devis et rendez-vous ?", answer: "Un bon logiciel artisan regroupe la gestion des demandes, la préparation de devis et l'organisation des rendez-vous au même endroit, pour éviter de jongler entre plusieurs outils." },
+  { question: "Comment éviter de perdre des demandes quand on est artisan ?", answer: "La plupart des demandes perdues le sont parce qu'elles arrivent au mauvais moment. Un assistant métier les centralise automatiquement pour que rien ne se perde, même quand vous êtes sur chantier." },
+  { question: "Ce type de solution est-il adapté aux artisans du BTP ?", answer: "Absolument. Ces solutions sont conçues pour les métiers du bâtiment : plombiers, électriciens, chauffagistes, peintres, menuisiers, couvreurs et tous les professionnels terrain." },
+  { question: "Peut-on tester ce logiciel gratuitement ?", answer: "Oui. Vous pouvez tester la solution gratuitement, sans engagement et sans carte bancaire. L'inscription prend quelques minutes." },
+  { question: "Quelle différence entre ce logiciel et un logiciel de gestion classique ?", answer: "Les logiciels de gestion classiques sont souvent pensés pour le bureau, complexes et lourds. Un assistant métier terrain est pensé pour le chantier : mobile-first, simple, centré sur la réception et le suivi des demandes clients." },
+  { question: "Comment mieux organiser les rendez-vous terrain ?", answer: "Grâce à un outil qui lie directement les rendez-vous aux dossiers clients, sans avoir à jongler entre plusieurs applications. Tout est accessible depuis votre téléphone." },
+  { question: "Comment être plus réactif que ses concurrents ?", answer: "En recevant et en traitant les demandes plus vite. L'artisan qui répond en premier remporte souvent le chantier. Un logiciel artisan bien pensé vous aide à être ce premier à répondre." },
+  { question: "Ce logiciel remplace-t-il un logiciel de comptabilité ?", answer: "Non. Ce type de solution se concentre sur la gestion des demandes clients et le suivi des dossiers. Il complète votre logiciel de comptabilité, il ne le remplace pas." },
+  { question: "Comment fonctionne le lien de demande unique ?", answer: "Vous recevez un lien personnalisé que vous pouvez partager partout : fiche Google, site web, carte de visite, QR code. Vos clients cliquent, remplissent leur demande, et tout arrive dans votre espace de travail." },
+  { question: "Les données sont-elles sécurisées ?", answer: "Oui. Les données sont hébergées de manière sécurisée et le système est conçu pour protéger les informations de vos clients et de votre activité." },
 ];
 
 const Index = () => {
+  useEffect(() => {
+    document.title = "Le nouveau logiciel préféré des artisans du BTP en 2026 | logiciel-artisan.fr";
+    document.querySelector('meta[name="description"]')?.setAttribute("content", "Découvrez le nouveau logiciel pensé pour les artisans du BTP : centralisation des demandes, suivi client, devis, rendez-vous, organisation terrain et assistant administratif mobile.");
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -43,7 +52,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="max-w-xl">
               <div className="flex flex-wrap gap-2 mb-6">
-                {["Pensé pour les artisans", "Simple à prendre en main", "Mobile first", "Test gratuit"].map(badge => (
+                {["Nouveau en 2026", "Pensé pour les artisans du BTP", "Assistant administratif terrain", "Test gratuit"].map(badge => (
                   <span key={badge} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/5 text-primary text-xs font-medium rounded-full">
                     <CheckCircle2 className="w-3.5 h-3.5" />
                     {badge}
@@ -52,13 +61,16 @@ const Index = () => {
               </div>
 
               <h1 className="text-display text-foreground mb-6">
-                Vous ne manquez pas de clients.{" "}
-                <span className="gradient-text">Vous perdez des demandes.</span>
+                Le nouveau logiciel préféré des{" "}
+                <span className="gradient-text">artisans du BTP en 2026</span>
               </h1>
 
+              <p className="text-body-lg text-muted-foreground mb-4 leading-relaxed">
+                Appels, SMS, WhatsApp, Google, demandes chantier… Les artisans du bâtiment ont besoin d'un outil simple pour{" "}
+                <strong className="text-foreground">centraliser leurs demandes, mieux suivre leurs clients et gagner du temps au quotidien.</strong>
+              </p>
               <p className="text-body-lg text-muted-foreground mb-8 leading-relaxed">
-                Appels, SMS, WhatsApp, Google… Vos demandes arrivent de partout.{" "}
-                <strong className="text-foreground">Bulbiz les centralise automatiquement au même endroit.</strong>
+                Cette solution agit comme un véritable assistant administratif pour les artisans terrain.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -66,13 +78,12 @@ const Index = () => {
                   Tester gratuitement <ArrowRight className="w-4 h-4 ml-1" />
                 </CTAButton>
                 <CTAButton variant="secondary" size="lg">
-                  Découvrir Bulbiz
+                  Découvrir la solution
                 </CTAButton>
               </div>
 
               <p className="text-sm text-muted-foreground">
-                Pas besoin de changer vos habitudes.<br />
-                On s'adapte à votre façon de travailler.
+                Pensé pour les artisans du BTP. Simple à prendre en main. Disponible sur mobile.
               </p>
 
               {/* Quick benefits */}
@@ -100,12 +111,12 @@ const Index = () => {
       {/* 2. SECTION PROBLÈME — Le vrai quotidien */}
       <SectionWrapper id="quotidien" variant="alt">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-heading text-foreground mb-6">Le vrai quotidien d'un artisan</h2>
+          <h2 className="text-heading text-foreground mb-6">Le vrai quotidien d'un artisan du BTP</h2>
           <div className="text-body-lg text-muted-foreground space-y-2">
-            <p>Vous êtes sur un chantier. Votre téléphone sonne.</p>
-            <p>Un client laisse un message. Un autre envoie un SMS. Un troisième passe par Google.</p>
-            <p>Vous vous dites : <em className="text-foreground font-medium">"Je note ça plus tard."</em></p>
-            <p className="text-foreground font-semibold pt-2">Et parfois : vous oubliez, vous perdez l'info, vous répondez trop tard.</p>
+            <p>Vous êtes sur chantier. Votre téléphone sonne.</p>
+            <p>Un client vous laisse un message. Un autre vous envoie un SMS. Un autre vous contacte via Google.</p>
+            <p>Parfois, une demande arrive sur WhatsApp. Parfois, elle reste dans un coin de votre tête.</p>
+            <p className="text-foreground font-semibold pt-2">Résultat : vous oubliez, vous perdez une information, vous répondez trop tard, vous relancez mal, vous laissez passer des opportunités.</p>
           </div>
         </div>
 
@@ -126,20 +137,20 @@ const Index = () => {
         </div>
 
         <p className="text-center mt-10 text-lg font-semibold text-foreground">
-          Ce n'est pas un manque de travail.<br />
-          <span className="text-primary">C'est un manque d'organisation.</span>
+          Le problème, ce n'est pas le manque de clients.<br />
+          <span className="text-primary">C'est la dispersion des demandes.</span>
         </p>
       </SectionWrapper>
 
       {/* 3. SECTION DOULEUR / IMPACT BUSINESS */}
       <SectionWrapper>
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-heading text-foreground mb-6">Ce que ça vous coûte vraiment</h2>
+          <h2 className="text-heading text-foreground mb-6">Ce que vous perdez vraiment quand vos demandes sont mal suivies</h2>
           <div className="grid sm:grid-cols-3 gap-6 mb-10">
             {[
-              { icon: FileText, title: "Un devis non relancé", desc: "Un client qui passe à la concurrence" },
-              { icon: Clock, title: "Une demande oubliée", desc: "Un chantier en moins dans le carnet" },
-              { icon: Phone, title: "Un client qui rappelle un autre", desc: "Du chiffre d'affaires qui disparaît" },
+              { icon: FileText, title: "Une demande oubliée", desc: "Un client qui part chez un concurrent" },
+              { icon: Clock, title: "Un devis jamais relancé", desc: "Un chantier en moins dans le carnet" },
+              { icon: Phone, title: "Un rendez-vous mal suivi", desc: "Une info qu'on ne retrouve plus" },
             ].map(item => (
               <div key={item.title} className="bg-card rounded-2xl p-6 shadow-card">
                 <item.icon className="w-10 h-10 text-destructive/70 mx-auto mb-4" />
@@ -148,9 +159,16 @@ const Index = () => {
               </div>
             ))}
           </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+            {["Chiffre d'affaires perdu", "Stress inutile", "Organisation fragile", "Image moins pro"].map(item => (
+              <div key={item} className="bg-destructive/5 rounded-xl p-4 text-center">
+                <span className="text-sm font-medium text-foreground">{item}</span>
+              </div>
+            ))}
+          </div>
           <p className="text-lg font-semibold text-foreground">
-            Vous perdez des chantiers…{" "}
-            <span className="text-primary">sans même le savoir.</span>
+            Des chantiers peuvent se perdre sans bruit,{" "}
+            <span className="text-primary">juste à cause d'un manque de suivi.</span>
           </p>
         </div>
       </SectionWrapper>
@@ -158,15 +176,17 @@ const Index = () => {
       {/* 4. SOLUTION SIMPLE */}
       <SectionWrapper variant="alt">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-heading text-foreground mb-4">Un principe simple</h2>
-          <p className="text-subheading text-primary">Un lien unique pour recevoir toutes vos demandes clients</p>
+          <h2 className="text-heading text-foreground mb-4">Un assistant administratif pensé pour les artisans du BTP</h2>
+          <p className="text-body-lg text-muted-foreground">
+            Cette solution permet aux artisans de centraliser leurs demandes clients au même endroit. Elle aide à structurer les informations, suivre les dossiers, faciliter les devis, organiser les rendez-vous et garder une vision plus claire du quotidien.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-4 text-body-lg text-muted-foreground">
-            <p>Vous mettez ce lien :</p>
+            <p className="font-semibold text-foreground">Un principe simple :</p>
             <ul className="space-y-2">
-              {["sur votre fiche Google", "sur votre site", "sur votre camion", "sur vos cartes", "avec un QR code"].map(item => (
+              {["Un lien à partager partout", "Une demande mieux cadrée", "Des informations mieux organisées", "Un meilleur suivi client", "Plus de réactivité au quotidien"].map(item => (
                 <li key={item} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
                   <span>{item}</span>
@@ -175,7 +195,7 @@ const Index = () => {
             </ul>
             <p className="pt-2">
               Vos clients font leur demande, ajoutent les infos, et{" "}
-              <strong className="text-foreground">tout arrive dans Bulbiz.</strong>
+              <strong className="text-foreground">tout arrive au même endroit, structuré et prêt.</strong>
             </p>
           </div>
 
@@ -184,7 +204,7 @@ const Index = () => {
             {[
               { icon: Link2, label: "Lien partagé", sub: "Un seul lien pour tous vos canaux" },
               { icon: Users, label: "Le client remplit", sub: "Infos, photos, description du besoin" },
-              { icon: FileText, label: "Dossier créé", sub: "Structuré automatiquement dans Bulbiz" },
+              { icon: FileText, label: "Dossier créé", sub: "Structuré automatiquement" },
             ].map((step, i) => (
               <div key={step.label}>
                 <div className="flex items-center gap-4 bg-card rounded-xl p-4 shadow-card w-full max-w-sm">
@@ -203,21 +223,21 @@ const Index = () => {
         </div>
       </SectionWrapper>
 
-      {/* 5. ORGANISATION AUTOMATIQUE */}
+      {/* 5. ORGANISATION AUTOMATIQUE — MODE ASSISTANT */}
       <SectionWrapper id="fonctionnalites">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-heading text-foreground mb-4">Tout est organisé automatiquement</h2>
+          <h2 className="text-heading text-foreground mb-4">Votre assistant pour ne plus rien laisser passer</h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <FeatureCard icon={FileText} title="Demande structurée" description="Chaque demande arrive avec les infos essentielles, organisées et lisibles." />
-          <FeatureCard icon={Zap} title="Dossier créé automatiquement" description="Plus besoin de créer des fiches. Le dossier client se génère tout seul." />
-          <FeatureCard icon={Camera} title="Photos rattachées" description="Les photos et vidéos de vos clients sont automatiquement liées au bon dossier." />
-          <FeatureCard icon={Calendar} title="Rendez-vous planifiés" description="Gérez vos rendez-vous directement dans Bulbiz, liés aux bons dossiers." />
-          <FeatureCard icon={Bell} title="Relances automatiques" description="Ne laissez plus aucun devis sans réponse. Bulbiz vous aide à relancer." />
-          <FeatureCard icon={Eye} title="Suivi clair" description="Voyez en un coup d'œil où en est chaque demande, chaque dossier." />
+          <FeatureCard icon={FileText} title="Centralisation des demandes" description="L'assistant centralise toutes les demandes clients au même endroit, quel que soit le canal." />
+          <FeatureCard icon={Zap} title="Informations bien rangées" description="Il aide à garder les bonnes infos au bon endroit, sans effort de votre part." />
+          <FeatureCard icon={Camera} title="Suivi client simplifié" description="Le suivi client est plus fluide, plus clair, plus professionnel." />
+          <FeatureCard icon={Calendar} title="Rendez-vous facilités" description="L'assistant facilite la gestion des rendez-vous terrain, liés aux bons dossiers." />
+          <FeatureCard icon={Bell} title="Organisation fluide" description="Relances, suivi des dossiers, préparation de devis : tout est fluidifié." />
+          <FeatureCard icon={Eye} title="Quotidien terrain soutenu" description="Il soutient le quotidien terrain des artisans du BTP au quotidien." />
         </div>
         <p className="text-center mt-10 text-lg font-semibold text-foreground">
-          Plus besoin de chercher. <span className="text-primary">Plus besoin d'y penser.</span>
+          Plus qu'un logiciel. <span className="text-primary">Un assistant métier pensé pour le terrain.</span>
         </p>
       </SectionWrapper>
 
@@ -226,23 +246,23 @@ const Index = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-heading text-foreground mb-6">
-              Pas une IA gadget.<br />
-              <span className="text-primary">Une IA pensée pour les artisans.</span>
+              Une IA utile,<br />
+              <span className="text-primary">pensée pour le terrain.</span>
             </h2>
             <div className="space-y-4 text-muted-foreground text-body-lg">
-              <p>Vous prenez une photo du chantier. Vous dictez une note vocale. Vous recevez un devis fournisseur.</p>
-              <p><strong className="text-foreground">Bulbiz analyse et génère automatiquement</strong> une liste de matériel et des suggestions adaptées.</p>
+              <p>Pas une IA gadget. Pas une IA faite pour faire joli.</p>
+              <p><strong className="text-foreground">Une IA pensée pour aider les artisans du BTP</strong> à mieux structurer les informations, gagner du temps et avancer plus vite sur leur administratif.</p>
             </div>
             <p className="mt-8 text-lg font-semibold text-foreground">
-              Une IA qui vous fait gagner du temps.<br />
-              <span className="text-primary">Pas une IA pour faire joli.</span>
+              Une IA qui assiste vraiment<br />
+              <span className="text-primary">le quotidien de l'artisan.</span>
             </p>
           </div>
           <div className="flex justify-center">
             <div className="bg-card rounded-2xl p-8 shadow-card max-w-sm w-full">
               <Brain className="w-12 h-12 text-primary mb-6" />
               <div className="space-y-4">
-                {["Analyse de photos chantier", "Compréhension des notes vocales", "Liste de matériel automatique", "Suggestions adaptées au chantier"].map(item => (
+                {["Analyse de photos chantier", "Compréhension des notes vocales", "Liste de matériel automatique", "Aide à la structuration des infos", "Gain de temps sur l'administratif", "Assistant intelligent métier"].map(item => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
                     <span className="text-sm text-foreground">{item}</span>
@@ -257,12 +277,15 @@ const Index = () => {
       {/* 7. POSITIONNEMENT */}
       <SectionWrapper variant="dark" className="!bg-foreground">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-heading text-background mb-8">Bulbiz n'est pas un simple logiciel.</h2>
+          <h2 className="text-heading text-background mb-6">Le nouveau logiciel préféré des artisans terrain</h2>
+          <p className="text-background/70 text-body-lg mb-8">
+            Ce n'est pas juste un logiciel de plus. C'est une solution conçue pour le terrain, pour les artisans qui veulent mieux suivre leurs demandes, mieux s'organiser, gagner du temps, répondre plus vite et paraître plus professionnels.
+          </p>
           <div className="grid sm:grid-cols-3 gap-6 mb-10">
             {[
-              { label: "Votre organisation", icon: Shield },
+              { label: "Votre organisation digitale", icon: Shield },
               { label: "Votre suivi client", icon: Users },
-              { label: "Votre mémoire", icon: Brain },
+              { label: "Votre mémoire métier", icon: Brain },
             ].map(item => (
               <div key={item.label} className="bg-background/5 border border-background/10 rounded-2xl p-6">
                 <item.icon className="w-8 h-8 text-primary mx-auto mb-3" />
@@ -270,21 +293,25 @@ const Index = () => {
               </div>
             ))}
           </div>
-          <p className="text-xl font-bold text-primary">La boîte à outils digitale de l'artisan.</p>
+          <p className="text-xl font-bold text-primary">La boîte à outils digitale des artisans du BTP en 2026.</p>
         </div>
       </SectionWrapper>
 
       {/* 8. RÉSULTATS */}
       <SectionWrapper>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-heading text-foreground mb-6">Ce que ça change pour vous</h2>
+          <h2 className="text-heading text-foreground mb-6">Ce que ça change concrètement pour un artisan</h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: CheckCircle2, text: "Vous ne perdez plus de demandes" },
-            { icon: TrendingUp, text: "Vous choisissez les chantiers les plus rentables" },
-            { icon: Zap, text: "Vous êtes plus rapide que vos concurrents" },
-            { icon: Star, text: "Vous paraissez plus professionnel" },
+            { icon: CheckCircle2, text: "Vous perdez moins de demandes" },
+            { icon: Eye, text: "Vous suivez mieux vos dossiers" },
+            { icon: Clock, text: "Vous gagnez du temps sur l'administratif" },
+            { icon: Zap, text: "Vous répondez plus vite" },
+            { icon: Star, text: "Vous inspirez davantage confiance" },
+            { icon: Shield, text: "Vous professionnalisez votre suivi client" },
+            { icon: TrendingUp, text: "Vous gardez le contrôle de votre activité" },
+            { icon: Heart, text: "Vous transformez plus de demandes en chantiers" },
           ].map(item => (
             <div key={item.text} className="bg-card rounded-2xl p-6 shadow-card text-center">
               <item.icon className="w-10 h-10 text-primary mx-auto mb-4" />
@@ -293,7 +320,7 @@ const Index = () => {
           ))}
         </div>
         <p className="text-center mt-10 text-lg font-semibold text-foreground">
-          Rien ne se perd. <span className="text-primary">Tout se transforme en chantier.</span>
+          Rien ne se disperse. <span className="text-primary">Tout devient plus clair, plus simple et plus rentable.</span>
         </p>
       </SectionWrapper>
 
@@ -302,13 +329,13 @@ const Index = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-heading text-foreground mb-6">Vos clients le ressentent immédiatement</h2>
           <div className="text-body-lg text-muted-foreground mb-8 space-y-2">
-            <p>Quand vous répondez vite, êtes organisé, ne perdez rien…</p>
-            <p className="text-foreground font-semibold">vous inspirez confiance.</p>
+            <p>Quand un artisan répond vite, garde une bonne organisation et suit correctement ses demandes…</p>
+            <p>La confiance augmente. L'image est plus professionnelle. Le suivi est plus rassurant.</p>
           </div>
           <div className="bg-card rounded-2xl p-8 shadow-card inline-block">
             <Heart className="w-10 h-10 text-primary mx-auto mb-4" />
             <p className="text-xl font-bold text-foreground">
-              Et dans l'artisanat, la confiance fait tout.
+              Dans le BTP, la confiance fait la différence.
             </p>
           </div>
         </div>
@@ -318,13 +345,14 @@ const Index = () => {
       <SectionWrapper>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-heading text-foreground mb-6">Votre bureau, c'est votre téléphone</h2>
+            <h2 className="text-heading text-foreground mb-6">Un logiciel pensé pour le terrain, donc pensé pour le téléphone</h2>
             <div className="text-body-lg text-muted-foreground space-y-2 mb-8">
-              <p>Sur chantier, dans le camion, entre deux rendez-vous…</p>
-              <p><strong className="text-foreground">Bulbiz est pensé pour ça.</strong></p>
+              <p>Le bureau de beaucoup d'artisans, c'est le téléphone.</p>
+              <p>Sur chantier. Dans le camion. Entre deux rendez-vous.</p>
+              <p><strong className="text-foreground">Cette solution a été pensée pour un usage mobile, simple, clair et rapide.</strong></p>
             </div>
             <div className="space-y-3">
-              {["Consultation rapide sur mobile", "Interface pensée pour le terrain", "Notifications en temps réel", "Tout accessible en un tap"].map(item => (
+              {["Mobile first, rapide à prendre en main", "Interface pensée pour le terrain", "Pratique sur le terrain, entre deux chantiers", "Fait pour le quotidien réel des artisans"].map(item => (
                 <div key={item} className="flex items-center gap-3">
                   <Smartphone className="w-4 h-4 text-primary flex-shrink-0" />
                   <span className="text-sm text-foreground">{item}</span>
@@ -341,7 +369,7 @@ const Index = () => {
       {/* 11. SECTION DÉMO VIDÉO */}
       <SectionWrapper variant="alt">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-heading text-foreground mb-4">Voyez comment Bulbiz fonctionne en situation réelle</h2>
+          <h2 className="text-heading text-foreground mb-4">Voyez comment ça fonctionne en situation réelle</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="flex justify-center">
@@ -380,12 +408,12 @@ const Index = () => {
       {/* 12. AVIS / PREUVES SOCIALES */}
       <SectionWrapper>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-heading text-foreground mb-4">Ce que disent les artisans</h2>
-          <p className="text-sm text-muted-foreground">Retours réels issus d'échanges terrain et d'avis utilisateurs</p>
+          <h2 className="text-heading text-foreground mb-4">Ce que les utilisateurs apprécient</h2>
+          <p className="text-sm text-muted-foreground">Des retours concrets, issus du terrain, sur une solution appréciée pour sa réactivité, son sérieux et son amélioration continue.</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { quote: "Depuis que j'utilise le lien Bulbiz, je ne perds plus aucune demande. Les clients remplissent tout, c'est super pratique.", metier: "Plombier, indépendant" },
+            { quote: "Depuis que j'utilise le lien de demande, je ne perds plus aucune demande. Les clients remplissent tout, c'est super pratique.", metier: "Plombier, indépendant" },
             { quote: "Je recevais mes demandes par SMS, WhatsApp, appels… C'était le bazar. Maintenant tout est au même endroit.", metier: "Électricien, 3 salariés" },
             { quote: "L'interface est simple. Pas besoin de formation. En 5 minutes c'était en place sur ma fiche Google.", metier: "Chauffagiste, indépendant" },
           ].map((t, i) => (
@@ -400,12 +428,12 @@ const Index = () => {
         </div>
       </SectionWrapper>
 
-      {/* 13. NOTRE AVIS SUR BULBIZ */}
+      {/* 13. NOTRE AVIS */}
       <SectionWrapper variant="alt">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-heading text-foreground mb-4">Notre avis sur Bulbiz</h2>
+          <h2 className="text-heading text-foreground mb-4">Pourquoi cette solution séduit de plus en plus les artisans du BTP</h2>
           <p className="text-body-lg text-muted-foreground">
-            Une solution particulièrement pertinente pour les artisans qui veulent reprendre le contrôle sur leurs demandes clients.
+            Un logiciel artisan particulièrement pertinent pour les professionnels terrain qui veulent reprendre le contrôle sur leurs demandes clients et leur organisation quotidienne.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -415,7 +443,7 @@ const Index = () => {
               <h3 className="font-semibold text-foreground">Ce qu'on aime</h3>
             </div>
             <ul className="space-y-3">
-              {["Pensée pour le terrain", "Centralisation simple des demandes", "Logique mobile", "Approche concrète", "Amélioration continue", "Expérience plus fluide pour l'artisan"].map(item => (
+              {["Pensée pour le terrain", "Approche concrète", "Centralisation claire des demandes", "Logique mobile", "Assistant administratif utile", "Gain de temps au quotidien", "Meilleure visibilité sur les dossiers"].map(item => (
                 <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
                   <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                   {item}
@@ -429,7 +457,7 @@ const Index = () => {
               <h3 className="font-semibold text-foreground">À garder en tête</h3>
             </div>
             <ul className="space-y-3">
-              {["Solution en évolution", "Approche différente des logiciels de gestion classiques", "Nécessite une vraie logique d'organisation pour en tirer le meilleur"].map(item => (
+              {["Solution récente", "Approche différente des outils classiques", "Pensée d'abord pour le suivi et l'organisation terrain"].map(item => (
                 <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
                   <CircleDot className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
                   {item}
@@ -443,33 +471,33 @@ const Index = () => {
       {/* 14. FONCTIONNALITÉS DÉTAILLÉES */}
       <SectionWrapper>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-heading text-foreground mb-4">Toutes les fonctionnalités essentielles</h2>
+          <h2 className="text-heading text-foreground mb-4">Toutes les fonctionnalités essentielles pour les artisans</h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <FeatureCard icon={Link2} title="Lien client unique" description="Un seul lien à partager partout : Google, site, carte, QR code." />
-          <FeatureCard icon={FileText} title="Demande centralisée" description="Toutes les demandes au même endroit, structurées et lisibles." />
-          <FeatureCard icon={Globe} title="Ajout d'informations" description="Vos clients ajoutent les détails dont vous avez besoin." />
-          <FeatureCard icon={Camera} title="Photos et vidéos" description="Vos clients envoient directement les visuels du chantier." />
+          <FeatureCard icon={Link2} title="Lien de demande unique" description="Un seul lien à partager partout : fiche Google, site, carte de visite, QR code." />
+          <FeatureCard icon={FileText} title="Centralisation des demandes" description="Toutes les demandes clients au même endroit, structurées et lisibles." />
+          <FeatureCard icon={Globe} title="Récupération des informations" description="Vos clients ajoutent les détails dont vous avez besoin pour avancer." />
+          <FeatureCard icon={Camera} title="Photos et vidéos chantier" description="Vos clients envoient directement les visuels liés à leur demande." />
           <FeatureCard icon={Zap} title="Structuration automatique" description="Le dossier se construit tout seul à partir des infos reçues." />
           <FeatureCard icon={Brain} title="Analyse intelligente" description="L'IA analyse photos, notes vocales et devis pour générer listes de matériel et suggestions." />
-          <FeatureCard icon={Calendar} title="Gestion de rendez-vous" description="Proposez et gérez vos RDV directement depuis Bulbiz." />
+          <FeatureCard icon={Calendar} title="Suivi des rendez-vous" description="Proposez et gérez vos rendez-vous terrain directement depuis l'outil." />
           <FeatureCard icon={Bell} title="Relances" description="Ne laissez plus filer une demande sans relance." />
-          <FeatureCard icon={Eye} title="Suivi plus clair" description="Vue d'ensemble de tous vos dossiers en cours." />
+          <FeatureCard icon={Eye} title="Vision claire du quotidien" description="Vue d'ensemble de tous vos dossiers en cours et de votre organisation." />
         </div>
       </SectionWrapper>
 
       {/* 15. CAS D'USAGE */}
       <SectionWrapper variant="alt">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-heading text-foreground mb-4">Des situations que vous connaissez</h2>
+          <h2 className="text-heading text-foreground mb-4">Des cas d'usage très concrets sur le terrain</h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { icon: Wrench, metier: "Plomberie", scenario: "Un client vous appelle pour une fuite. Vous êtes sur un chantier. Vous lui envoyez votre lien Bulbiz. Il décrit le problème, ajoute des photos. Vous traitez la demande quand vous êtes disponible." },
+            { icon: Wrench, metier: "Plomberie", scenario: "Un client vous appelle pour une fuite. Vous êtes sur un chantier. Vous lui envoyez votre lien. Il décrit le problème, ajoute des photos. Vous traitez la demande quand vous êtes disponible." },
             { icon: Plug, metier: "Électricité", scenario: "Une demande arrive via Google. Le client remplit le formulaire, décrit son besoin et ajoute les plans. Tout arrive dans votre dossier, prêt à être traité." },
-            { icon: Zap, metier: "Chauffage", scenario: "Entre deux interventions, vous consultez vos nouvelles demandes sur Bulbiz. Un client a besoin d'un remplacement de chaudière. Le dossier est complet, vous pouvez répondre vite." },
-            { icon: Paintbrush, metier: "Rénovation", scenario: "Un chantier de rénovation complète. Le client envoie photos, mesures, description pièce par pièce. Tout est structuré dans un seul dossier dans Bulbiz." },
-            { icon: HardHat, metier: "Dépannage", scenario: "En dépannage, la rapidité compte. Avec Bulbiz, vous recevez la demande structurée immédiatement. Vous êtes le premier artisan à répondre." },
+            { icon: Zap, metier: "Chauffage", scenario: "Entre deux interventions, vous consultez vos nouvelles demandes. Un client a besoin d'un remplacement de chaudière. Le dossier est complet, vous pouvez répondre vite." },
+            { icon: HardHat, metier: "Artisan multiservice", scenario: "Vous gérez plusieurs types de demandes. Grâce à la centralisation, chaque demande est structurée avec les bonnes infos, photos et détails, quel que soit le métier." },
+            { icon: Building2, metier: "Petite entreprise BTP", scenario: "Vous avez une petite équipe et beaucoup de demandes. L'assistant organise tout automatiquement pour que rien ne se perde entre les collaborateurs." },
           ].map(item => (
             <div key={item.metier} className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-shadow">
               <item.icon className="w-8 h-8 text-primary mb-4" />
@@ -484,7 +512,7 @@ const Index = () => {
       <SectionWrapper>
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-heading text-foreground mb-4">
-            Pourquoi Bulbiz parle davantage au terrain que les outils trop génériques
+            Pourquoi ce nouveau logiciel parle davantage aux artisans du BTP que les outils génériques
           </h2>
         </div>
         <div className="max-w-4xl mx-auto bg-card rounded-2xl shadow-card overflow-hidden">
@@ -536,7 +564,7 @@ const Index = () => {
       {/* 19. CTA FINAL */}
       <section className="section-padding bg-primary">
         <div className="container-wide text-center max-w-3xl mx-auto">
-          <h2 className="text-heading text-primary-foreground mb-6">Essayez Bulbiz gratuitement</h2>
+          <h2 className="text-heading text-primary-foreground mb-6">Essayez gratuitement le logiciel préféré des artisans du BTP</h2>
           <p className="text-primary-foreground/80 text-body-lg mb-8">
             Sans engagement. Simple. Mis en place en quelques minutes.
           </p>
@@ -555,7 +583,7 @@ const Index = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary-foreground/30 text-primary-foreground font-semibold rounded-xl hover:bg-primary-foreground/10 transition-all"
             >
-              Découvrir Bulbiz
+              Découvrir la solution
             </a>
           </div>
           <p className="text-primary-foreground/60 text-sm">

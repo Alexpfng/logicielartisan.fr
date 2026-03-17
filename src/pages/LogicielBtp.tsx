@@ -8,8 +8,8 @@ import { useEffect } from "react";
 
 const LogicielBtp = () => {
   useEffect(() => {
-    document.title = "Logiciel BTP — Centralisez les demandes de votre entreprise du bâtiment";
-    document.querySelector('meta[name="description"]')?.setAttribute("content", "Le logiciel BTP pensé pour les artisans du bâtiment. Centralisez vos demandes clients, organisez vos chantiers et gagnez en efficacité. Test gratuit.");
+    document.title = "Logiciel BTP 2026 — L'assistant administratif pour artisans du bâtiment";
+    document.querySelector('meta[name="description"]')?.setAttribute("content", "Le logiciel BTP pensé pour les artisans du bâtiment en 2026. Centralisez vos demandes clients, organisez vos chantiers et gagnez en efficacité grâce à un assistant administratif terrain. Test gratuit.");
   }, []);
 
   return (
@@ -23,13 +23,13 @@ const LogicielBtp = () => {
             <span>/</span>
             <span className="text-foreground">Logiciel BTP</span>
           </div>
-          <h1 className="text-display text-foreground mb-6">Logiciel BTP : l'outil qui simplifie le quotidien du bâtiment</h1>
+          <h1 className="text-display text-foreground mb-6">Logiciel BTP : l'assistant administratif qui simplifie le quotidien du bâtiment</h1>
           <p className="text-body-lg text-muted-foreground max-w-2xl mb-8">
-            Les artisans du BTP ont besoin d'un logiciel qui comprend leur métier. Pas un ERP complexe, mais un outil terrain, simple et efficace.
+            Les artisans du BTP ont besoin d'un logiciel qui comprend leur métier. Pas un ERP complexe, mais un assistant administratif terrain, simple et efficace, pensé pour le chantier.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <CTAButton variant="primary" size="lg">Tester gratuitement <ArrowRight className="w-4 h-4 ml-1" /></CTAButton>
-            <CTAButton variant="secondary" size="lg">Découvrir Bulbiz</CTAButton>
+            <CTAButton variant="secondary" size="lg">Découvrir la solution</CTAButton>
           </div>
         </div>
       </section>
@@ -39,7 +39,7 @@ const LogicielBtp = () => {
           <h2 className="text-heading text-foreground mb-6">Les défis spécifiques du BTP</h2>
           <div className="text-muted-foreground space-y-4 text-body-lg mb-12">
             <p>Le secteur du bâtiment a ses propres réalités. Les artisans du BTP sont sur le terrain, leurs clients les contactent par tous les canaux possibles, et la gestion administrative passe souvent au second plan.</p>
-            <p>Un bon <strong className="text-foreground">logiciel BTP</strong> doit comprendre ces contraintes et s'y adapter, pas l'inverse.</p>
+            <p>Un bon <strong className="text-foreground">logiciel BTP</strong> doit comprendre ces contraintes et s'y adapter, pas l'inverse. C'est pourquoi les artisans du bâtiment ont besoin d'un véritable assistant administratif terrain.</p>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-6 mb-12">
@@ -57,9 +57,9 @@ const LogicielBtp = () => {
             ))}
           </div>
 
-          <h2 className="text-heading text-foreground mb-6">Bulbiz pour le BTP</h2>
+          <h2 className="text-heading text-foreground mb-6">Un logiciel BTP pensé comme un assistant métier</h2>
           <div className="text-muted-foreground space-y-4 text-body-lg mb-12">
-            <p>Bulbiz est utilisé par de nombreux artisans du bâtiment : plombiers, électriciens, chauffagistes, peintres, couvreurs, menuisiers, carreleurs…</p>
+            <p>Ce logiciel est utilisé par de nombreux artisans du bâtiment : plombiers, électriciens, chauffagistes, peintres, couvreurs, menuisiers, carreleurs…</p>
             <p>L'outil s'adapte à chaque métier grâce à son approche universelle : <strong className="text-foreground">un lien unique pour centraliser toutes les demandes</strong>, quel que soit le canal d'entrée.</p>
             <p>Les fonctionnalités clés pour le BTP :</p>
             <ul className="space-y-2 ml-4">
@@ -73,8 +73,8 @@ const LogicielBtp = () => {
           </div>
 
           <div className="bg-primary rounded-2xl p-8 text-center">
-            <h2 className="text-xl font-bold text-primary-foreground mb-4">Testez Bulbiz pour votre activité BTP</h2>
-            <p className="text-primary-foreground/80 mb-6">Gratuit, sans engagement, adapté à votre métier.</p>
+            <h2 className="text-xl font-bold text-primary-foreground mb-4">Testez ce logiciel BTP pour votre activité</h2>
+            <p className="text-primary-foreground/80 mb-6">Gratuit, sans engagement, adapté à votre métier du bâtiment.</p>
             <a href="https://app.bulbiz.io" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-card text-foreground font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all">
               Commencer gratuitement <ArrowRight className="w-4 h-4 ml-2" />
             </a>
