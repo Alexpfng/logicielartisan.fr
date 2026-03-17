@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="font-bold text-lg">logiciel-artisan.fr</span>
             </div>
             <p className="text-sm opacity-70 leading-relaxed">
-              Le guide de référence pour aider les artisans à mieux s'organiser avec les bons outils numériques.
+              Le guide de référence pour aider les artisans du BTP à mieux s'organiser avec les bons outils numériques.
             </p>
           </div>
 
@@ -23,7 +23,7 @@ const Footer = () => {
             <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 opacity-50">Navigation</h4>
             <ul className="space-y-3">
               <li><Link to="/" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Accueil</Link></li>
-              <li><Link to="/bulbiz-avis" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Notre avis sur Bulbiz</Link></li>
+              <li><Link to="/bulbiz-avis" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Notre avis</Link></li>
               <li><Link to="/logiciel-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel artisan</Link></li>
               <li><Link to="/faq" className="text-sm opacity-70 hover:opacity-100 transition-opacity">FAQ</Link></li>
             </ul>
@@ -35,8 +35,8 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><Link to="/application-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Application artisan</Link></li>
               <li><Link to="/logiciel-btp" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel BTP</Link></li>
-              <li><a href="https://bulbiz.io" target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Bulbiz.io</a></li>
-              <li><a href="https://app.bulbiz.io" target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Tester Bulbiz</a></li>
+              <li><a href="https://bulbiz.io" target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Découvrir la solution</a></li>
+              <li><a href="https://app.bulbiz.io" target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Tester gratuitement</a></li>
             </ul>
           </div>
 

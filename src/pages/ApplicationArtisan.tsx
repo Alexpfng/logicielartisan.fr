@@ -8,8 +8,8 @@ import { useEffect } from "react";
 
 const ApplicationArtisan = () => {
   useEffect(() => {
-    document.title = "Application Artisan — L'app mobile pour gérer vos demandes terrain";
-    document.querySelector('meta[name="description"]')?.setAttribute("content", "Découvrez la meilleure application pour artisan. Mobile-first, simple et efficace. Gérez vos demandes clients depuis votre téléphone. Test gratuit.");
+    document.title = "Application Artisan BTP 2026 — L'app mobile pour gérer vos demandes terrain";
+    document.querySelector('meta[name="description"]')?.setAttribute("content", "Découvrez la meilleure application pour artisan du BTP. Mobile-first, simple et efficace. Gérez vos demandes clients et votre organisation terrain depuis votre téléphone. Test gratuit.");
   }, []);
 
   return (
@@ -23,23 +23,23 @@ const ApplicationArtisan = () => {
             <span>/</span>
             <span className="text-foreground">Application artisan</span>
           </div>
-          <h1 className="text-display text-foreground mb-6">Application artisan : gérez tout depuis votre téléphone</h1>
+          <h1 className="text-display text-foreground mb-6">Application artisan : votre assistant administratif mobile pour le BTP</h1>
           <p className="text-body-lg text-muted-foreground max-w-2xl mb-8">
-            Votre bureau, c'est votre téléphone. La bonne application artisan doit être mobile-first, simple et pensée pour le terrain.
+            Votre bureau, c'est votre téléphone. La bonne application artisan doit être mobile-first, simple et pensée pour le quotidien terrain des artisans du BTP.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <CTAButton variant="primary" size="lg">Tester gratuitement <ArrowRight className="w-4 h-4 ml-1" /></CTAButton>
-            <CTAButton variant="secondary" size="lg">Découvrir Bulbiz</CTAButton>
+            <CTAButton variant="secondary" size="lg">Découvrir la solution</CTAButton>
           </div>
         </div>
       </section>
 
       <SectionWrapper>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-heading text-foreground mb-6">Pourquoi une application mobile pour artisan ?</h2>
+          <h2 className="text-heading text-foreground mb-6">Pourquoi une application mobile pour artisan du BTP ?</h2>
           <div className="text-muted-foreground space-y-4 text-body-lg mb-12">
-            <p>Un artisan passe la majorité de son temps sur le terrain. Entre les chantiers, les déplacements et les rendez-vous, le bureau n'est plus le centre de l'activité.</p>
-            <p>C'est pourquoi une <strong className="text-foreground">application artisan</strong> doit être pensée mobile-first. Pas une version réduite d'un logiciel bureau, mais un outil conçu dès le départ pour fonctionner sur téléphone.</p>
+            <p>Un artisan du BTP passe la majorité de son temps sur le terrain. Entre les chantiers, les déplacements et les rendez-vous, le bureau n'est plus le centre de l'activité.</p>
+            <p>C'est pourquoi une <strong className="text-foreground">application artisan</strong> doit être pensée mobile-first. Pas une version réduite d'un logiciel bureau, mais un véritable assistant administratif conçu dès le départ pour fonctionner sur téléphone.</p>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-6 mb-12">
@@ -57,9 +57,9 @@ const ApplicationArtisan = () => {
             ))}
           </div>
 
-          <h2 className="text-heading text-foreground mb-6">Bulbiz : l'application artisan pensée terrain</h2>
+          <h2 className="text-heading text-foreground mb-6">L'application artisan pensée terrain</h2>
           <div className="text-muted-foreground space-y-4 text-body-lg mb-12">
-            <p>Bulbiz est une application conçue mobile-first pour les artisans. Tout est accessible depuis votre téléphone :</p>
+            <p>Cette application a été conçue mobile-first pour les artisans du BTP. Tout est accessible depuis votre téléphone :</p>
             <ul className="space-y-2 ml-4">
               {["Réception des demandes clients", "Consultation des dossiers", "Gestion des rendez-vous", "Suivi des demandes et relances", "Photos et documents liés aux chantiers"].map(item => (
                 <li key={item} className="flex items-start gap-2">

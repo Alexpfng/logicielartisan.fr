@@ -9,8 +9,8 @@ import { useEffect } from "react";
 
 const LogicielArtisan = () => {
   useEffect(() => {
-    document.title = "Logiciel Artisan — Le meilleur outil pour gérer vos demandes clients";
-    document.querySelector('meta[name="description"]')?.setAttribute("content", "Découvrez le meilleur logiciel pour artisan. Centralisez vos demandes clients, gagnez du temps et ne perdez plus aucun chantier. Test gratuit.");
+    document.title = "Logiciel Artisan 2026 — L'assistant administratif pour artisans du BTP | logiciel-artisan.fr";
+    document.querySelector('meta[name="description"]')?.setAttribute("content", "Découvrez le meilleur logiciel pour artisan du BTP en 2026. Centralisez vos demandes clients, gagnez du temps et ne perdez plus aucun chantier. Test gratuit.");
   }, []);
 
   return (
@@ -24,24 +24,24 @@ const LogicielArtisan = () => {
             <span>/</span>
             <span className="text-foreground">Logiciel artisan</span>
           </div>
-          <h1 className="text-display text-foreground mb-6">Logiciel artisan : centralisez vos demandes et gagnez du temps</h1>
+          <h1 className="text-display text-foreground mb-6">Logiciel artisan : l'assistant administratif qui centralise vos demandes et vous fait gagner du temps</h1>
           <p className="text-body-lg text-muted-foreground max-w-2xl mb-8">
-            En tant qu'artisan, votre temps est précieux. Le bon logiciel artisan ne doit pas vous compliquer la vie — il doit vous faire gagner du temps, centraliser vos demandes clients et vous aider à ne rien perdre.
+            En tant qu'artisan du BTP, votre temps est précieux. Le bon logiciel artisan ne doit pas vous compliquer la vie — il doit agir comme un véritable assistant administratif terrain : centraliser vos demandes clients, structurer vos informations et vous aider à ne rien perdre.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <CTAButton variant="primary" size="lg">Tester gratuitement <ArrowRight className="w-4 h-4 ml-1" /></CTAButton>
-            <CTAButton variant="secondary" size="lg">Découvrir Bulbiz</CTAButton>
+            <CTAButton variant="secondary" size="lg">Découvrir la solution</CTAButton>
           </div>
         </div>
       </section>
 
       <SectionWrapper>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-heading text-foreground mb-6">Pourquoi un logiciel pour artisan est devenu indispensable</h2>
+          <h2 className="text-heading text-foreground mb-6">Pourquoi un logiciel artisan est devenu indispensable en 2026</h2>
           <div className="text-muted-foreground space-y-4 text-body-lg mb-12">
-            <p>Le quotidien d'un artisan a changé. Les demandes ne viennent plus uniquement par téléphone. Elles arrivent par SMS, WhatsApp, Google, formulaires en ligne, bouche-à-oreille…</p>
+            <p>Le quotidien d'un artisan du BTP a changé. Les demandes ne viennent plus uniquement par téléphone. Elles arrivent par SMS, WhatsApp, Google, formulaires en ligne, bouche-à-oreille…</p>
             <p>Sans un outil adapté, il est très facile de perdre des demandes, d'oublier de relancer un devis, ou de répondre trop tard à un client qui ira voir ailleurs.</p>
-            <p>Un bon <strong className="text-foreground">logiciel artisan</strong> permet de :</p>
+            <p>Un bon <strong className="text-foreground">logiciel artisan</strong> agit comme un assistant administratif terrain et permet de :</p>
             <ul className="space-y-2 ml-4">
               {["Centraliser toutes les demandes clients au même endroit", "Structurer automatiquement les informations reçues", "Ne plus perdre de demandes entre deux chantiers", "Gagner en rapidité et en professionnalisme", "Gérer son activité depuis son téléphone"].map(item => (
                 <li key={item} className="flex items-start gap-2">
@@ -52,15 +52,15 @@ const LogicielArtisan = () => {
             </ul>
           </div>
 
-          <h2 className="text-heading text-foreground mb-6">Bulbiz : le logiciel artisan pensé pour le terrain</h2>
+          <h2 className="text-heading text-foreground mb-6">Un logiciel artisan pensé pour le terrain</h2>
           <div className="text-muted-foreground space-y-4 text-body-lg mb-12">
-            <p>Bulbiz n'est pas un logiciel de gestion classique. C'est un outil conçu spécifiquement pour les artisans qui travaillent sur le terrain et qui ont besoin d'une solution simple, mobile et efficace.</p>
-            <p>Le principe est simple : vous créez un lien unique que vous partagez partout. Vos clients font leur demande via ce lien, ajoutent photos et détails, et tout arrive dans Bulbiz, structuré et prêt à être traité.</p>
+            <p>Ce n'est pas un logiciel de gestion classique. C'est un outil conçu spécifiquement pour les artisans du BTP qui travaillent sur le terrain et qui ont besoin d'une solution simple, mobile et efficace.</p>
+            <p>Le principe est simple : vous créez un lien unique que vous partagez partout. Vos clients font leur demande via ce lien, ajoutent photos et détails, et tout arrive structuré et prêt à être traité.</p>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-6 mb-12">
             {[
-              { icon: Wrench, title: "Pensé pour le métier", desc: "Pas un outil générique adapté après coup. Bulbiz est né du terrain." },
+              { icon: Wrench, title: "Pensé pour le métier", desc: "Pas un outil générique. Un assistant administratif né du terrain artisan." },
               { icon: Smartphone, title: "Mobile first", desc: "Tout fonctionne depuis votre téléphone. Sur chantier, dans le camion." },
               { icon: Shield, title: "Simple et fiable", desc: "Pas besoin de formation. Prise en main en quelques minutes." },
               { icon: Zap, title: "Rapide", desc: "Recevez et traitez les demandes plus vite que vos concurrents." },
@@ -73,9 +73,9 @@ const LogicielArtisan = () => {
             ))}
           </div>
 
-          <h2 className="text-heading text-foreground mb-6">Les métiers qui utilisent Bulbiz</h2>
+          <h2 className="text-heading text-foreground mb-6">Les métiers qui utilisent ce logiciel artisan</h2>
           <div className="text-muted-foreground space-y-4 text-body-lg mb-12">
-            <p>Bulbiz est utilisé par tous types d'artisans du bâtiment :</p>
+            <p>Ce logiciel est utilisé par tous types d'artisans du bâtiment :</p>
             <ul className="grid grid-cols-2 gap-2 ml-4">
               {["Plombiers", "Électriciens", "Chauffagistes", "Peintres", "Menuisiers", "Couvreurs", "Carreleurs", "Maçons"].map(m => (
                 <li key={m} className="flex items-center gap-2">
@@ -84,7 +84,7 @@ const LogicielArtisan = () => {
                 </li>
               ))}
             </ul>
-            <p className="pt-2">Quel que soit votre métier, si vous recevez des demandes clients et que vous voulez mieux vous organiser, Bulbiz peut vous aider.</p>
+            <p className="pt-2">Quel que soit votre métier dans le BTP, si vous recevez des demandes clients et que vous voulez mieux vous organiser, cette solution peut vous aider.</p>
           </div>
 
           <div className="bg-primary rounded-2xl p-8 text-center">
@@ -101,10 +101,10 @@ const LogicielArtisan = () => {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-heading text-foreground mb-6">Questions fréquentes sur les logiciels pour artisan</h2>
           <FAQAccordion items={[
-            { question: "Quel est le meilleur logiciel pour artisan en 2025 ?", answer: "Le meilleur logiciel pour artisan est celui qui correspond à votre quotidien. Si votre principal problème est la perte de demandes clients, Bulbiz est une solution particulièrement adaptée grâce à sa simplicité et sa logique terrain." },
+            { question: "Quel est le meilleur logiciel pour artisan du BTP en 2026 ?", answer: "Le meilleur logiciel pour artisan est celui qui correspond à votre quotidien terrain. Si votre principal problème est la perte de demandes clients, un assistant administratif terrain est une solution particulièrement adaptée grâce à sa simplicité et sa logique mobile." },
             { question: "Un logiciel artisan est-il vraiment utile pour un indépendant ?", answer: "Oui, surtout si vous recevez des demandes par plusieurs canaux. Un bon logiciel artisan vous fait gagner du temps et vous évite de perdre des chantiers." },
-            { question: "Combien coûte un logiciel pour artisan ?", answer: "Les prix varient beaucoup. Bulbiz propose un test gratuit sans engagement pour que vous puissiez juger par vous-même." },
-            { question: "Faut-il une formation pour utiliser Bulbiz ?", answer: "Non. Bulbiz est conçu pour être utilisé immédiatement, sans formation. La prise en main se fait en quelques minutes." },
+            { question: "Combien coûte un logiciel pour artisan ?", answer: "Les prix varient beaucoup. Cette solution propose un test gratuit sans engagement pour que vous puissiez juger par vous-même." },
+            { question: "Faut-il une formation pour utiliser ce logiciel ?", answer: "Non. Cette solution est conçue pour être utilisée immédiatement, sans formation. La prise en main se fait en quelques minutes." },
           ]} />
         </div>
       </SectionWrapper>
