@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoArtisan from "@/assets/logo-artisan.png";
 
 const Footer = () => {
   return (
@@ -8,9 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground text-sm font-bold">LA</span>
-              </div>
+              <img src={logoArtisan} alt="logiciel-artisan.fr" className="w-8 h-8 rounded-lg" />
               <span className="font-bold text-lg">logiciel-artisan.fr</span>
             </div>
             <p className="text-sm opacity-70 leading-relaxed">

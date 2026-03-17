@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logoArtisan from "@/assets/logo-artisan.png";
 import { Menu, X } from "lucide-react";
 import CTAButton from "./CTAButton";
 import { cn } from "@/lib/utils";
@@ -36,9 +37,7 @@ const Header = () => {
     >
       <div className="container-wide flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2 font-bold text-lg text-foreground">
-          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground text-sm font-bold">LA</span>
-          </div>
+          <img src={logoArtisan} alt="logiciel-artisan.fr" className="w-8 h-8 rounded-lg" />
           <span className="hidden sm:inline">logiciel-artisan.fr</span>
         </Link>
 
