@@ -230,8 +230,8 @@ const Index = () => {
               <span className="text-primary">Une IA pensée pour les artisans.</span>
             </h2>
             <div className="space-y-4 text-muted-foreground text-body-lg">
-              <p>Vous préparez un devis. Vous dictez une note vocale. Vous ajoutez des infos chantier.</p>
-              <p><strong className="text-foreground">Bulbiz comprend et aide à structurer</strong> les besoins, les informations et le suivi.</p>
+              <p>Vous prenez une photo du chantier. Vous dictez une note vocale. Vous recevez un devis fournisseur.</p>
+              <p><strong className="text-foreground">Bulbiz analyse et génère automatiquement</strong> une liste de matériel et des suggestions adaptées.</p>
             </div>
             <p className="mt-8 text-lg font-semibold text-foreground">
               Une IA qui vous fait gagner du temps.<br />
