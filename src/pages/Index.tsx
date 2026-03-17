@@ -344,12 +344,16 @@ const Index = () => {
           <h2 className="text-heading text-foreground mb-4">Voyez comment Bulbiz fonctionne en situation réelle</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="bg-foreground rounded-2xl p-4 shadow-elevated aspect-video flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                <div className="w-0 h-0 border-t-8 border-b-8 border-l-12 border-transparent border-l-primary ml-1" />
-              </div>
-              <p className="text-background/70 text-sm">Vidéo de démonstration</p>
+          <div className="flex justify-center">
+            <div className="bg-foreground rounded-[2.5rem] p-3 shadow-elevated max-w-[280px] w-full">
+              <video
+                className="w-full rounded-[2rem] aspect-[9/16] object-cover"
+                src="/videos/demo-bulbiz.mov"
+                controls
+                playsInline
+                preload="metadata"
+                poster=""
+              />
             </div>
           </div>
           <div className="space-y-4">
