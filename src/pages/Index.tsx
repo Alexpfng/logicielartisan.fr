@@ -230,8 +230,8 @@ const Index = () => {
               <span className="text-primary">Une IA pensée pour les artisans.</span>
             </h2>
             <div className="space-y-4 text-muted-foreground text-body-lg">
-              <p>Vous préparez un devis. Vous dictez une note vocale. Vous ajoutez des infos chantier.</p>
-              <p><strong className="text-foreground">Bulbiz comprend et aide à structurer</strong> les besoins, les informations et le suivi.</p>
+              <p>Vous prenez une photo du chantier. Vous dictez une note vocale. Vous recevez un devis fournisseur.</p>
+              <p><strong className="text-foreground">Bulbiz analyse et génère automatiquement</strong> une liste de matériel et des suggestions adaptées.</p>
             </div>
             <p className="mt-8 text-lg font-semibold text-foreground">
               Une IA qui vous fait gagner du temps.<br />
@@ -242,7 +242,7 @@ const Index = () => {
             <div className="bg-card rounded-2xl p-8 shadow-card max-w-sm w-full">
               <Brain className="w-12 h-12 text-primary mb-6" />
               <div className="space-y-4">
-                {["Structuration automatique des besoins", "Aide à la préparation de devis", "Notes vocales comprises", "Suivi intelligent des dossiers"].map(item => (
+                {["Analyse de photos chantier", "Compréhension des notes vocales", "Liste de matériel automatique", "Suggestions adaptées au chantier"].map(item => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
                     <span className="text-sm text-foreground">{item}</span>
@@ -357,7 +357,7 @@ const Index = () => {
               { step: "1", label: "Réception de la demande", desc: "Le client remplit le formulaire depuis votre lien" },
               { step: "2", label: "Dossier structuré", desc: "Toutes les infos sont organisées automatiquement" },
               { step: "3", label: "Suivi plus clair", desc: "Vous voyez tout en un coup d'œil" },
-              { step: "4", label: "Devis facilité", desc: "L'IA vous aide à préparer vos propositions" },
+              { step: "4", label: "Liste matériel générée", desc: "L'IA analyse photos et infos pour suggérer le matériel nécessaire" },
               { step: "5", label: "Rendez-vous mieux organisés", desc: "Planifiez directement depuis le dossier" },
             ].map(item => (
               <div key={item.step} className="flex items-start gap-4">
@@ -448,9 +448,9 @@ const Index = () => {
           <FeatureCard icon={Globe} title="Ajout d'informations" description="Vos clients ajoutent les détails dont vous avez besoin." />
           <FeatureCard icon={Camera} title="Photos et vidéos" description="Vos clients envoient directement les visuels du chantier." />
           <FeatureCard icon={Zap} title="Structuration automatique" description="Le dossier se construit tout seul à partir des infos reçues." />
-          <FeatureCard icon={FileText} title="Aide au devis" description="L'IA vous aide à préparer vos propositions plus vite." />
+          <FeatureCard icon={Brain} title="Analyse intelligente" description="L'IA analyse photos, notes vocales et devis pour générer listes de matériel et suggestions." />
           <FeatureCard icon={Calendar} title="Gestion de rendez-vous" description="Proposez et gérez vos RDV directement depuis Bulbiz." />
-          <FeatureCard icon={Bell} title="Relances" description="Ne laissez plus filer un devis sans relance." />
+          <FeatureCard icon={Bell} title="Relances" description="Ne laissez plus filer une demande sans relance." />
           <FeatureCard icon={Eye} title="Suivi plus clair" description="Vue d'ensemble de tous vos dossiers en cours." />
         </div>
       </SectionWrapper>
