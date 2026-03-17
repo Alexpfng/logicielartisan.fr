@@ -347,12 +347,11 @@ const Index = () => {
           <div className="flex justify-center">
             <div className="bg-foreground rounded-[2.5rem] p-3 shadow-elevated max-w-[280px] w-full">
               <video
-                className="w-full rounded-[2rem] aspect-[9/16] object-cover"
+                className="w-full rounded-[2rem]"
                 src="/videos/demo-bulbiz.mov"
                 controls
                 playsInline
                 preload="metadata"
-                poster=""
               />
             </div>
           </div>
