@@ -242,7 +242,7 @@ const Index = () => {
             <div className="bg-card rounded-2xl p-8 shadow-card max-w-sm w-full">
               <Brain className="w-12 h-12 text-primary mb-6" />
               <div className="space-y-4">
-                {["Structuration automatique des besoins", "Aide à la préparation de devis", "Notes vocales comprises", "Suivi intelligent des dossiers"].map(item => (
+                {["Analyse de photos chantier", "Compréhension des notes vocales", "Liste de matériel automatique", "Suggestions adaptées au chantier"].map(item => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
                     <span className="text-sm text-foreground">{item}</span>
