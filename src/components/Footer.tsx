@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoArtisan from "@/assets/logo-artisan.png";
 
 const Footer = () => {
   return (

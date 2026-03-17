@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logoArtisan from "@/assets/logo-artisan.png";
 import { Menu, X } from "lucide-react";
 import CTAButton from "./CTAButton";
 import { cn } from "@/lib/utils";
