@@ -13,7 +13,38 @@ import {
   ThumbsUp, Eye, Lightbulb, TrendingUp, Heart, Hammer,
   Plug, Paintbrush, HardHat, CircleDot
 } from "lucide-react";
-import { useEffect } from "react";
+import Seo from "@/components/Seo";
+
+const homeJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Bulbiz",
+    url: "https://bulbiz.io",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "logiciel-artisan.fr",
+    url: "https://logiciel-artisan.fr",
+    inLanguage: "fr-FR",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Bulbiz",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web, iOS, Android",
+    description:
+      "Assistant administratif terrain pour les artisans du BTP : centralisation des demandes clients, suivi des dossiers, rendez-vous et organisation mobile-first.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "EUR",
+      description: "Essai gratuit, sans engagement",
+    },
+  },
+];
 
 const faqItems = [
   { question: "Quel est le nouveau logiciel préféré des artisans du BTP en 2026 ?", answer: "En 2026, de plus en plus d'artisans du bâtiment adoptent une nouvelle génération de logiciels pensés pour le terrain. Ces solutions se distinguent par leur simplicité, leur logique mobile-first et leur capacité à centraliser les demandes clients venant de tous les canaux : appels, SMS, WhatsApp, Google ou bouche-à-oreille." },
