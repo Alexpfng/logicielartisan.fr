@@ -1,15 +1,25 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 const PolitiqueConfidentialite = () => {
-  useEffect(() => {
-    document.title = "Politique de confidentialité — logiciel-artisan.fr";
-  }, []);
-
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://logiciel-artisan.fr/" },
+      { "@type": "ListItem", position: 2, name: "Politique de confidentialité", item: "https://logiciel-artisan.fr/politique-de-confidentialite" },
+    ],
+  };
   return (
     <div className="min-h-screen">
+      <Seo
+        path="/politique-de-confidentialite"
+        title="Politique de confidentialité — logiciel-artisan.fr"
+        description="Politique de confidentialité du site logiciel-artisan.fr : collecte des données, cookies, services tiers et droits RGPD."
+        jsonLd={jsonLd}
+      />
       <Header />
       <section className="pt-28 md:pt-36 pb-16 bg-background">
         <div className="container-narrow">

@@ -13,7 +13,38 @@ import {
   ThumbsUp, Eye, Lightbulb, TrendingUp, Heart, Hammer,
   Plug, Paintbrush, HardHat, CircleDot
 } from "lucide-react";
-import { useEffect } from "react";
+import Seo from "@/components/Seo";
+
+const baseJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Bulbiz",
+    url: "https://bulbiz.io",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "logiciel-artisan.fr",
+    url: "https://logiciel-artisan.fr",
+    inLanguage: "fr-FR",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Bulbiz",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web, iOS, Android",
+    description:
+      "Assistant administratif terrain pour les artisans du BTP : centralisation des demandes clients, suivi des dossiers, rendez-vous et organisation mobile-first.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "EUR",
+      description: "Essai gratuit, sans engagement",
+    },
+  },
+];
 
 const faqItems = [
   { question: "Quel est le nouveau logiciel préféré des artisans du BTP en 2026 ?", answer: "En 2026, de plus en plus d'artisans du bâtiment adoptent une nouvelle génération de logiciels pensés pour le terrain. Ces solutions se distinguent par leur simplicité, leur logique mobile-first et leur capacité à centraliser les demandes clients venant de tous les canaux : appels, SMS, WhatsApp, Google ou bouche-à-oreille." },
@@ -37,14 +68,29 @@ const faqItems = [
 ];
 
 const Index = () => {
-  useEffect(() => {
-    document.title = "Le nouveau logiciel préféré des artisans du BTP en 2026 | logiciel-artisan.fr";
-    document.querySelector('meta[name="description"]')?.setAttribute("content", "Découvrez le nouveau logiciel pensé pour les artisans du BTP : centralisation des demandes, suivi client, devis, rendez-vous, organisation terrain et assistant administratif mobile.");
-  }, []);
+  const homeJsonLd = [
+    ...baseJsonLd,
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((q) => ({
+        "@type": "Question",
+        name: q.question,
+        acceptedAnswer: { "@type": "Answer", text: q.answer },
+      })),
+    },
+  ];
 
   return (
     <div className="min-h-screen">
+      <Seo
+        path="/"
+        title="Le nouveau logiciel préféré des artisans du BTP en 2026 | logiciel-artisan.fr"
+        description="Découvrez le nouveau logiciel pensé pour les artisans du BTP : centralisation des demandes, suivi client, devis, rendez-vous, organisation terrain et assistant administratif mobile."
+        jsonLd={homeJsonLd}
+      />
       <Header />
+
 
       {/* 1. HERO */}
       <section className="relative pt-28 md:pt-36 pb-16 md:pb-24 bg-background overflow-hidden">
@@ -557,7 +603,7 @@ const Index = () => {
           <h2 className="text-heading text-foreground mb-4">Questions fréquentes</h2>
         </div>
         <div className="max-w-3xl mx-auto">
-          <FAQAccordion items={faqItems} showSchema />
+          <FAQAccordion items={faqItems} />
         </div>
       </SectionWrapper>
 

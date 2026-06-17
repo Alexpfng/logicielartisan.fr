@@ -2,18 +2,27 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
+import Seo from "@/components/Seo";
 import { CheckCircle2, ArrowRight, Smartphone, Wifi, Battery, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 const ApplicationArtisan = () => {
-  useEffect(() => {
-    document.title = "Application Artisan BTP 2026 — L'app mobile pour gérer vos demandes terrain";
-    document.querySelector('meta[name="description"]')?.setAttribute("content", "Découvrez la meilleure application pour artisan du BTP. Mobile-first, simple et efficace. Gérez vos demandes clients et votre organisation terrain depuis votre téléphone. Test gratuit.");
-  }, []);
-
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://logiciel-artisan.fr/" },
+      { "@type": "ListItem", position: 2, name: "Application artisan", item: "https://logiciel-artisan.fr/application-artisan" },
+    ],
+  };
   return (
     <div className="min-h-screen">
+      <Seo
+        path="/application-artisan"
+        title="Application Artisan BTP 2026 — L'app mobile pour gérer vos demandes terrain"
+        description="Découvrez la meilleure application pour artisan du BTP. Mobile-first, simple et efficace. Gérez vos demandes clients et votre organisation terrain depuis votre téléphone. Test gratuit."
+        jsonLd={jsonLd}
+      />
       <Header />
 
       <section className="pt-28 md:pt-36 pb-16 bg-background">

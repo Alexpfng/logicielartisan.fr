@@ -2,18 +2,27 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
+import Seo from "@/components/Seo";
 import { CheckCircle2, ArrowRight, Building2, HardHat, FileText, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 const LogicielBtp = () => {
-  useEffect(() => {
-    document.title = "Logiciel BTP 2026 — L'assistant administratif pour artisans du bâtiment";
-    document.querySelector('meta[name="description"]')?.setAttribute("content", "Le logiciel BTP pensé pour les artisans du bâtiment en 2026. Centralisez vos demandes clients, organisez vos chantiers et gagnez en efficacité grâce à un assistant administratif terrain. Test gratuit.");
-  }, []);
-
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://logiciel-artisan.fr/" },
+      { "@type": "ListItem", position: 2, name: "Logiciel BTP", item: "https://logiciel-artisan.fr/logiciel-btp" },
+    ],
+  };
   return (
     <div className="min-h-screen">
+      <Seo
+        path="/logiciel-btp"
+        title="Logiciel BTP 2026 — L'assistant administratif pour artisans du bâtiment"
+        description="Le logiciel BTP pensé pour les artisans du bâtiment en 2026. Centralisez vos demandes clients, organisez vos chantiers et gagnez en efficacité grâce à un assistant administratif terrain. Test gratuit."
+        jsonLd={jsonLd}
+      />
       <Header />
 
       <section className="pt-28 md:pt-36 pb-16 bg-background">

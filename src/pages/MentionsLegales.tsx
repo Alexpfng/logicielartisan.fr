@@ -1,15 +1,25 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 const MentionsLegales = () => {
-  useEffect(() => {
-    document.title = "Mentions légales — logiciel-artisan.fr";
-  }, []);
-
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://logiciel-artisan.fr/" },
+      { "@type": "ListItem", position: 2, name: "Mentions légales", item: "https://logiciel-artisan.fr/mentions-legales" },
+    ],
+  };
   return (
     <div className="min-h-screen">
+      <Seo
+        path="/mentions-legales"
+        title="Mentions légales — logiciel-artisan.fr"
+        description="Mentions légales du site logiciel-artisan.fr : éditeur, hébergement, propriété intellectuelle et responsabilité."
+        jsonLd={jsonLd}
+      />
       <Header />
       <section className="pt-28 md:pt-36 pb-16 bg-background">
         <div className="container-narrow">
