@@ -19,6 +19,13 @@ const LogicielGestionChantier = lazy(() => import("./pages/LogicielGestionChanti
 const LogicielPlanningArtisan = lazy(() => import("./pages/LogicielPlanningArtisan.tsx"));
 const AssistantAdministratifArtisan = lazy(() => import("./pages/AssistantAdministratifArtisan.tsx"));
 const OutilGestionArtisanBtp = lazy(() => import("./pages/OutilGestionArtisanBtp.tsx"));
+const LogicielElectricien = lazy(() => import("./pages/LogicielElectricien.tsx"));
+const LogicielChauffagiste = lazy(() => import("./pages/LogicielChauffagiste.tsx"));
+const LogicielMenuisier = lazy(() => import("./pages/LogicielMenuisier.tsx"));
+const LogicielPeintre = lazy(() => import("./pages/LogicielPeintre.tsx"));
+const LogicielCouvreur = lazy(() => import("./pages/LogicielCouvreur.tsx"));
+
+
 
 const queryClient = new QueryClient();
 
@@ -46,6 +53,11 @@ const App = () => (
             <Route path="/logiciel-planning-artisan" element={<LogicielPlanningArtisan />} />
             <Route path="/assistant-administratif-artisan" element={<AssistantAdministratifArtisan />} />
             <Route path="/outil-gestion-artisan-btp" element={<OutilGestionArtisanBtp />} />
+            <Route path="/logiciel-electricien" element={<LogicielElectricien />} />
+            <Route path="/logiciel-chauffagiste" element={<LogicielChauffagiste />} />
+            <Route path="/logiciel-menuisier" element={<LogicielMenuisier />} />
+            <Route path="/logiciel-peintre" element={<LogicielPeintre />} />
+            <Route path="/logiciel-couvreur" element={<LogicielCouvreur />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/mentions-legales" element={<MentionsLegales />} />
             <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
