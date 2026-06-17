@@ -38,6 +38,11 @@ const Footer = () => {
               <li><Link to="/logiciel-devis-facture-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel devis facture</Link></li>
               <li><Link to="/logiciel-gestion-chantier" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Gestion de chantier</Link></li>
               <li><Link to="/logiciel-planning-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Planning artisan</Link></li>
+              <li><Link to="/logiciel-electricien" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel électricien</Link></li>
+              <li><Link to="/logiciel-chauffagiste" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel chauffagiste</Link></li>
+              <li><Link to="/logiciel-menuisier" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel menuisier</Link></li>
+              <li><Link to="/logiciel-peintre" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel peintre</Link></li>
+              <li><Link to="/logiciel-couvreur" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel couvreur</Link></li>
             </ul>
           </div>
 
