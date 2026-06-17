@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
       <div className="container-wide py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-8">
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
@@ -23,19 +23,31 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><Link to="/" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Accueil</Link></li>
               <li><Link to="/bulbiz-avis" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Notre avis</Link></li>
-              <li><Link to="/logiciel-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel artisan</Link></li>
               <li><Link to="/faq" className="text-sm opacity-70 hover:opacity-100 transition-opacity">FAQ</Link></li>
+              <li><a href="https://bulbiz.io" target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Découvrir la solution</a></li>
+              <li><a href="https://app.bulbiz.io" target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Tester gratuitement</a></li>
             </ul>
           </div>
 
-          {/* Pages SEO */}
+          {/* Pages SEO — Logiciels */}
+          <div>
+            <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 opacity-50">Logiciels</h4>
+            <ul className="space-y-3">
+              <li><Link to="/logiciel-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel artisan</Link></li>
+              <li><Link to="/logiciel-btp" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel BTP</Link></li>
+              <li><Link to="/logiciel-devis-facture-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel devis facture</Link></li>
+              <li><Link to="/logiciel-gestion-chantier" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Gestion de chantier</Link></li>
+              <li><Link to="/logiciel-planning-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Planning artisan</Link></li>
+            </ul>
+          </div>
+
+          {/* Pages SEO — Ressources */}
           <div>
             <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 opacity-50">Ressources</h4>
             <ul className="space-y-3">
               <li><Link to="/application-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Application artisan</Link></li>
-              <li><Link to="/logiciel-btp" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel BTP</Link></li>
-              <li><a href="https://bulbiz.io" target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Découvrir la solution</a></li>
-              <li><a href="https://app.bulbiz.io" target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Tester gratuitement</a></li>
+              <li><Link to="/assistant-administratif-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Assistant administratif</Link></li>
+              <li><Link to="/outil-gestion-artisan-btp" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Outil gestion BTP</Link></li>
             </ul>
           </div>
 
