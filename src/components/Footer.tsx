@@ -43,6 +43,8 @@ const Footer = () => {
               <li><Link to="/logiciel-menuisier" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel menuisier</Link></li>
               <li><Link to="/logiciel-peintre" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel peintre</Link></li>
               <li><Link to="/logiciel-couvreur" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel couvreur</Link></li>
+              <li><Link to="/logiciel-macon" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel maçon</Link></li>
+              <li><Link to="/logiciel-carreleur" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel carreleur</Link></li>
             </ul>
           </div>
 
@@ -53,6 +55,9 @@ const Footer = () => {
               <li><Link to="/application-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Application artisan</Link></li>
               <li><Link to="/assistant-administratif-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Assistant administratif</Link></li>
               <li><Link to="/outil-gestion-artisan-btp" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Outil gestion BTP</Link></li>
+              <li><Link to="/logiciel-gestion-client-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Gestion client artisan</Link></li>
+              <li><Link to="/meilleur-logiciel-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Meilleur logiciel 2026</Link></li>
+              <li><Link to="/logiciel-artisan-gratuit" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel artisan gratuit</Link></li>
             </ul>
           </div>
 

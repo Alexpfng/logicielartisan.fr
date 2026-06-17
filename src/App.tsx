@@ -24,6 +24,11 @@ const LogicielChauffagiste = lazy(() => import("./pages/LogicielChauffagiste.tsx
 const LogicielMenuisier = lazy(() => import("./pages/LogicielMenuisier.tsx"));
 const LogicielPeintre = lazy(() => import("./pages/LogicielPeintre.tsx"));
 const LogicielCouvreur = lazy(() => import("./pages/LogicielCouvreur.tsx"));
+const LogicielMacon = lazy(() => import("./pages/LogicielMacon.tsx"));
+const LogicielCarreleur = lazy(() => import("./pages/LogicielCarreleur.tsx"));
+const LogicielGestionClientArtisan = lazy(() => import("./pages/LogicielGestionClientArtisan.tsx"));
+const MeilleurLogicielArtisan = lazy(() => import("./pages/MeilleurLogicielArtisan.tsx"));
+const LogicielArtisanGratuit = lazy(() => import("./pages/LogicielArtisanGratuit.tsx"));
 
 
 
@@ -58,9 +63,13 @@ const App = () => (
             <Route path="/logiciel-menuisier" element={<LogicielMenuisier />} />
             <Route path="/logiciel-peintre" element={<LogicielPeintre />} />
             <Route path="/logiciel-couvreur" element={<LogicielCouvreur />} />
+            <Route path="/logiciel-macon" element={<LogicielMacon />} />
+            <Route path="/logiciel-carreleur" element={<LogicielCarreleur />} />
+            <Route path="/logiciel-gestion-client-artisan" element={<LogicielGestionClientArtisan />} />
+            <Route path="/meilleur-logiciel-artisan" element={<MeilleurLogicielArtisan />} />
+            <Route path="/logiciel-artisan-gratuit" element={<LogicielArtisanGratuit />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/mentions-legales" element={<MentionsLegales />} />
-            <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
             <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

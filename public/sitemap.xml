@@ -71,6 +71,31 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://logiciel-artisan.fr/logiciel-macon</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://logiciel-artisan.fr/logiciel-carreleur</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://logiciel-artisan.fr/logiciel-gestion-client-artisan</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://logiciel-artisan.fr/meilleur-logiciel-artisan</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://logiciel-artisan.fr/logiciel-artisan-gratuit</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://logiciel-artisan.fr/bulbiz-avis</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
