@@ -44,6 +44,18 @@ const homeJsonLd = [
       description: "Essai gratuit, sans engagement",
     },
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { question: "Quel est le nouveau logiciel préféré des artisans du BTP en 2026 ?", answer: "En 2026, de plus en plus d'artisans du bâtiment adoptent une nouvelle génération de logiciels pensés pour le terrain : simples, mobile-first, capables de centraliser les demandes clients de tous les canaux." },
+      { question: "Existe-t-il un assistant administratif pour artisan ?", answer: "Oui, il existe des solutions qui agissent comme de véritables assistants administratifs pour les artisans du BTP : centralisation des demandes, structuration des informations clients, organisation des rendez-vous et suivi quotidien." },
+    ].map((q) => ({
+      "@type": "Question",
+      name: q.question,
+      acceptedAnswer: { "@type": "Answer", text: q.answer },
+    })),
+  },
 ];
 
 const faqItems = [
@@ -590,7 +602,7 @@ const Index = () => {
           <h2 className="text-heading text-foreground mb-4">Questions fréquentes</h2>
         </div>
         <div className="max-w-3xl mx-auto">
-          <FAQAccordion items={faqItems} showSchema />
+          <FAQAccordion items={faqItems} />
         </div>
       </SectionWrapper>
 
