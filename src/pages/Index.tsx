@@ -68,14 +68,16 @@ const faqItems = [
 ];
 
 const Index = () => {
-  useEffect(() => {
-    document.title = "Le nouveau logiciel préféré des artisans du BTP en 2026 | logiciel-artisan.fr";
-    document.querySelector('meta[name="description"]')?.setAttribute("content", "Découvrez le nouveau logiciel pensé pour les artisans du BTP : centralisation des demandes, suivi client, devis, rendez-vous, organisation terrain et assistant administratif mobile.");
-  }, []);
-
   return (
     <div className="min-h-screen">
+      <Seo
+        path="/"
+        title="Le nouveau logiciel préféré des artisans du BTP en 2026 | logiciel-artisan.fr"
+        description="Découvrez le nouveau logiciel pensé pour les artisans du BTP : centralisation des demandes, suivi client, devis, rendez-vous, organisation terrain et assistant administratif mobile."
+        jsonLd={homeJsonLd}
+      />
       <Header />
+
 
       {/* 1. HERO */}
       <section className="relative pt-28 md:pt-36 pb-16 md:pb-24 bg-background overflow-hidden">
