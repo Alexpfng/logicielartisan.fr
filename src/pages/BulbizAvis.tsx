@@ -2,18 +2,27 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
+import Seo from "@/components/Seo";
 import { CheckCircle2, CircleDot, ThumbsUp, Lightbulb, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 const BulbizAvis = () => {
-  useEffect(() => {
-    document.title = "Avis 2026 — Notre test complet du nouveau logiciel pour artisans du BTP | logiciel-artisan.fr";
-    document.querySelector('meta[name="description"]')?.setAttribute("content", "Notre avis détaillé sur le nouveau logiciel préféré des artisans du BTP en 2026. Test complet, avantages, limites et verdict sur cet assistant administratif terrain.");
-  }, []);
-
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://logiciel-artisan.fr/" },
+      { "@type": "ListItem", position: 2, name: "Notre avis", item: "https://logiciel-artisan.fr/bulbiz-avis" },
+    ],
+  };
   return (
     <div className="min-h-screen">
+      <Seo
+        path="/bulbiz-avis"
+        title="Avis 2026 — Notre test complet du nouveau logiciel pour artisans du BTP | logiciel-artisan.fr"
+        description="Notre avis détaillé sur le nouveau logiciel préféré des artisans du BTP en 2026. Test complet, avantages, limites et verdict sur cet assistant administratif terrain."
+        jsonLd={jsonLd}
+      />
       <Header />
 
       <section className="pt-28 md:pt-36 pb-16 bg-background">

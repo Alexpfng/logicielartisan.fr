@@ -3,18 +3,45 @@ import Footer from "@/components/Footer";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
 import FAQAccordion from "@/components/FAQAccordion";
+import Seo from "@/components/Seo";
 import { CheckCircle2, ArrowRight, Wrench, Smartphone, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+
+const faqItems = [
+  { question: "Quel est le meilleur logiciel pour artisan du BTP en 2026 ?", answer: "Le meilleur logiciel pour artisan est celui qui correspond à votre quotidien terrain. Si votre principal problème est la perte de demandes clients, un assistant administratif terrain est une solution particulièrement adaptée grâce à sa simplicité et sa logique mobile." },
+  { question: "Un logiciel artisan est-il vraiment utile pour un indépendant ?", answer: "Oui, surtout si vous recevez des demandes par plusieurs canaux. Un bon logiciel artisan vous fait gagner du temps et vous évite de perdre des chantiers." },
+  { question: "Combien coûte un logiciel pour artisan ?", answer: "Les prix varient beaucoup. Cette solution propose un test gratuit sans engagement pour que vous puissiez juger par vous-même." },
+  { question: "Faut-il une formation pour utiliser ce logiciel ?", answer: "Non. Cette solution est conçue pour être utilisée immédiatement, sans formation. La prise en main se fait en quelques minutes." },
+];
 
 const LogicielArtisan = () => {
-  useEffect(() => {
-    document.title = "Logiciel Artisan 2026 — L'assistant administratif pour artisans du BTP | logiciel-artisan.fr";
-    document.querySelector('meta[name="description"]')?.setAttribute("content", "Découvrez le meilleur logiciel pour artisan du BTP en 2026. Centralisez vos demandes clients, gagnez du temps et ne perdez plus aucun chantier. Test gratuit.");
-  }, []);
-
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://logiciel-artisan.fr/" },
+        { "@type": "ListItem", position: 2, name: "Logiciel artisan", item: "https://logiciel-artisan.fr/logiciel-artisan" },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((q) => ({
+        "@type": "Question",
+        name: q.question,
+        acceptedAnswer: { "@type": "Answer", text: q.answer },
+      })),
+    },
+  ];
   return (
     <div className="min-h-screen">
+      <Seo
+        path="/logiciel-artisan"
+        title="Logiciel Artisan 2026 — L'assistant administratif pour artisans du BTP | logiciel-artisan.fr"
+        description="Découvrez le meilleur logiciel pour artisan du BTP en 2026. Centralisez vos demandes clients, gagnez du temps et ne perdez plus aucun chantier. Test gratuit."
+        jsonLd={jsonLd}
+      />
       <Header />
 
       <section className="pt-28 md:pt-36 pb-16 bg-background">

@@ -3,9 +3,9 @@ import Footer from "@/components/Footer";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
 import FAQAccordion from "@/components/FAQAccordion";
+import Seo from "@/components/Seo";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 const faqItems = [
   { question: "Quel est le nouveau logiciel préféré des artisans du BTP en 2026 ?", answer: "En 2026, une nouvelle génération de logiciels pensés pour le terrain séduit de plus en plus d'artisans du bâtiment. Ces solutions se distinguent par leur simplicité, leur logique mobile-first et leur capacité à centraliser les demandes clients de tous les canaux." },
@@ -29,13 +29,34 @@ const faqItems = [
 ];
 
 const FAQ = () => {
-  useEffect(() => {
-    document.title = "FAQ — Questions fréquentes sur les logiciels pour artisan du BTP | logiciel-artisan.fr";
-    document.querySelector('meta[name="description"]')?.setAttribute("content", "Toutes les réponses à vos questions sur les logiciels pour artisan, la gestion des demandes clients, l'organisation terrain et les assistants administratifs pour le BTP.");
-  }, []);
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://logiciel-artisan.fr/" },
+        { "@type": "ListItem", position: 2, name: "FAQ", item: "https://logiciel-artisan.fr/faq" },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((q) => ({
+        "@type": "Question",
+        name: q.question,
+        acceptedAnswer: { "@type": "Answer", text: q.answer },
+      })),
+    },
+  ];
 
   return (
     <div className="min-h-screen">
+      <Seo
+        path="/faq"
+        title="FAQ — Questions fréquentes sur les logiciels pour artisan du BTP | logiciel-artisan.fr"
+        description="Toutes les réponses à vos questions sur les logiciels pour artisan, la gestion des demandes clients, l'organisation terrain et les assistants administratifs pour le BTP."
+        jsonLd={jsonLd}
+      />
       <Header />
 
       <section className="pt-28 md:pt-36 pb-16 bg-background">
@@ -54,7 +75,7 @@ const FAQ = () => {
 
       <SectionWrapper>
         <div className="max-w-3xl mx-auto">
-          <FAQAccordion items={faqItems} showSchema />
+          <FAQAccordion items={faqItems} />
         </div>
       </SectionWrapper>
 
