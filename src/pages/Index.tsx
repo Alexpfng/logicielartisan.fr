@@ -68,6 +68,19 @@ const faqItems = [
 ];
 
 const Index = () => {
+  const homeJsonLd = [
+    ...baseJsonLd,
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((q) => ({
+        "@type": "Question",
+        name: q.question,
+        acceptedAnswer: { "@type": "Answer", text: q.answer },
+      })),
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       <Seo
