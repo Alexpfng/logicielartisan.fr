@@ -29,6 +29,12 @@ const LogicielCarreleur = lazy(() => import("./pages/LogicielCarreleur.tsx"));
 const LogicielGestionClientArtisan = lazy(() => import("./pages/LogicielGestionClientArtisan.tsx"));
 const MeilleurLogicielArtisan = lazy(() => import("./pages/MeilleurLogicielArtisan.tsx"));
 const LogicielArtisanGratuit = lazy(() => import("./pages/LogicielArtisanGratuit.tsx"));
+const AutomatisationIaBtp = lazy(() => import("./pages/AutomatisationIaBtp.tsx"));
+const IaPourArtisans = lazy(() => import("./pages/IaPourArtisans.tsx"));
+const AutomatiserDevisArtisan = lazy(() => import("./pages/AutomatiserDevisArtisan.tsx"));
+const AutomatiserRelancesClients = lazy(() => import("./pages/AutomatiserRelancesClients.tsx"));
+const AutomatiserAdministratifArtisan = lazy(() => import("./pages/AutomatiserAdministratifArtisan.tsx"));
+const IaSuiviChantier = lazy(() => import("./pages/IaSuiviChantier.tsx"));
 
 
 
