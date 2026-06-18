@@ -61,6 +61,19 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Pages SEO — Automatisation & IA */}
+          <div>
+            <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 opacity-50">Automatisation & IA</h4>
+            <ul className="space-y-3">
+              <li><Link to="/automatisation-ia-btp" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Automatisation & IA dans le BTP</Link></li>
+              <li><Link to="/ia-pour-artisans" className="text-sm opacity-70 hover:opacity-100 transition-opacity">IA pour artisans</Link></li>
+              <li><Link to="/automatiser-devis-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Automatiser les devis</Link></li>
+              <li><Link to="/automatiser-relances-clients" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Automatiser les relances</Link></li>
+              <li><Link to="/automatiser-administratif-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Automatiser l'administratif</Link></li>
+              <li><Link to="/ia-suivi-chantier" className="text-sm opacity-70 hover:opacity-100 transition-opacity">IA et suivi de chantier</Link></li>
+            </ul>
+          </div>
+
           {/* Legal */}
           <div>
             <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 opacity-50">Légal</h4>
