@@ -29,6 +29,12 @@ const LogicielCarreleur = lazy(() => import("./pages/LogicielCarreleur.tsx"));
 const LogicielGestionClientArtisan = lazy(() => import("./pages/LogicielGestionClientArtisan.tsx"));
 const MeilleurLogicielArtisan = lazy(() => import("./pages/MeilleurLogicielArtisan.tsx"));
 const LogicielArtisanGratuit = lazy(() => import("./pages/LogicielArtisanGratuit.tsx"));
+const AutomatisationIaBtp = lazy(() => import("./pages/AutomatisationIaBtp.tsx"));
+const IaPourArtisans = lazy(() => import("./pages/IaPourArtisans.tsx"));
+const AutomatiserDevisArtisan = lazy(() => import("./pages/AutomatiserDevisArtisan.tsx"));
+const AutomatiserRelancesClients = lazy(() => import("./pages/AutomatiserRelancesClients.tsx"));
+const AutomatiserAdministratifArtisan = lazy(() => import("./pages/AutomatiserAdministratifArtisan.tsx"));
+const IaSuiviChantier = lazy(() => import("./pages/IaSuiviChantier.tsx"));
 
 
 
@@ -68,6 +74,12 @@ const App = () => (
             <Route path="/logiciel-gestion-client-artisan" element={<LogicielGestionClientArtisan />} />
             <Route path="/meilleur-logiciel-artisan" element={<MeilleurLogicielArtisan />} />
             <Route path="/logiciel-artisan-gratuit" element={<LogicielArtisanGratuit />} />
+            <Route path="/automatisation-ia-btp" element={<AutomatisationIaBtp />} />
+            <Route path="/ia-pour-artisans" element={<IaPourArtisans />} />
+            <Route path="/automatiser-devis-artisan" element={<AutomatiserDevisArtisan />} />
+            <Route path="/automatiser-relances-clients" element={<AutomatiserRelancesClients />} />
+            <Route path="/automatiser-administratif-artisan" element={<AutomatiserAdministratifArtisan />} />
+            <Route path="/ia-suivi-chantier" element={<IaSuiviChantier />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/mentions-legales" element={<MentionsLegales />} />
             <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />

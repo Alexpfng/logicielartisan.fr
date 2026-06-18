@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
       <div className="container-wide py-16">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-10 md:gap-8">
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
@@ -58,6 +58,19 @@ const Footer = () => {
               <li><Link to="/logiciel-gestion-client-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Gestion client artisan</Link></li>
               <li><Link to="/meilleur-logiciel-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Meilleur logiciel 2026</Link></li>
               <li><Link to="/logiciel-artisan-gratuit" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Logiciel artisan gratuit</Link></li>
+            </ul>
+          </div>
+
+          {/* Pages SEO — Automatisation & IA */}
+          <div>
+            <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 opacity-50">Automatisation & IA</h4>
+            <ul className="space-y-3">
+              <li><Link to="/automatisation-ia-btp" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Automatisation & IA dans le BTP</Link></li>
+              <li><Link to="/ia-pour-artisans" className="text-sm opacity-70 hover:opacity-100 transition-opacity">IA pour artisans</Link></li>
+              <li><Link to="/automatiser-devis-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Automatiser les devis</Link></li>
+              <li><Link to="/automatiser-relances-clients" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Automatiser les relances</Link></li>
+              <li><Link to="/automatiser-administratif-artisan" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Automatiser l'administratif</Link></li>
+              <li><Link to="/ia-suivi-chantier" className="text-sm opacity-70 hover:opacity-100 transition-opacity">IA et suivi de chantier</Link></li>
             </ul>
           </div>
 
