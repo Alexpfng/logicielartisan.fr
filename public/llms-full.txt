@@ -1,0 +1,102 @@
+# logiciel-artisan.fr — version détaillée
+
+> Site d'information sur les logiciels et l'automatisation/IA pour les artisans du BTP. Il présente Bulbiz, un assistant administratif terrain qui centralise les demandes clients (appels, SMS, WhatsApp, Google), aide à structurer les dossiers, à préparer les devis et à organiser le suivi du quotidien. Bulbiz n'est ni un ERP, ni un logiciel de comptabilité.
+
+logiciel-artisan.fr s'adresse aux artisans du BTP (plombiers, électriciens, chauffagistes, menuisiers, peintres, carreleurs, couvreurs, maçons) et aux petites entreprises du bâtiment. Le site explique, sans jargon, comment un assistant administratif numérique peut faire gagner du temps au quotidien et fiabiliser le suivi client. Les pages sont organisées par usage, par métier et par thématique IA/automatisation.
+
+## Logiciels par usage
+
+- [Logiciel artisan](https://logiciel-artisan.fr/logiciel-artisan)
+  Page pilier sur les logiciels destinés aux artisans du BTP. Elle explique à quoi sert un logiciel artisan, les usages terrain les plus utiles (centralisation des demandes, devis, suivi), et comment choisir un outil adapté à une petite structure.
+
+- [Application artisan](https://logiciel-artisan.fr/application-artisan)
+  Présentation d'une application mobile pensée pour le terrain : prendre une demande client en direct, consulter ses chantiers, retrouver l'historique d'un client, sans repasser par le bureau.
+
+- [Logiciel BTP](https://logiciel-artisan.fr/logiciel-btp)
+  Panorama des logiciels utiles aux petites entreprises du bâtiment : suivi chantier, planning, devis, gestion client. Le contenu reste factuel et n'aborde ni l'ERP, ni la comptabilité.
+
+- [Logiciel devis facture artisan](https://logiciel-artisan.fr/logiciel-devis-facture-artisan)
+  Comment préparer rapidement des devis et factures clairs depuis le chantier ou le bureau, en s'appuyant sur les informations déjà centralisées sur les demandes clients.
+
+- [Logiciel gestion de chantier](https://logiciel-artisan.fr/logiciel-gestion-chantier)
+  Suivi de l'avancement par chantier, photos, notes vocales, échanges client : ce que permet un bon outil de suivi chantier et les points de vigilance pour ne rien oublier.
+
+- [Logiciel planning artisan](https://logiciel-artisan.fr/logiciel-planning-artisan)
+  Organiser les interventions, la tournée de la semaine et la charge des équipes. Conseils pratiques pour un planning lisible adapté à une activité d'artisan.
+
+- [Assistant administratif artisan](https://logiciel-artisan.fr/assistant-administratif-artisan)
+  Explique le rôle d'un assistant administratif numérique : centraliser les demandes (appels, SMS, WhatsApp, formulaires), structurer les dossiers et préparer ce qu'il faut pour avancer vite.
+
+- [Outil de gestion artisan BTP](https://logiciel-artisan.fr/outil-gestion-artisan-btp)
+  Vue d'ensemble des outils qui fluidifient la gestion d'une petite entreprise du BTP au quotidien, sans empiler des logiciels lourds.
+
+- [Logiciel gestion client artisan](https://logiciel-artisan.fr/logiciel-gestion-client-artisan)
+  Centralisation des contacts clients, historique des échanges et des chantiers, pour retrouver en un clic ce qui a été dit et fait.
+
+- [Logiciel artisan gratuit](https://logiciel-artisan.fr/logiciel-artisan-gratuit)
+  Ce que recouvre vraiment la gratuité d'un logiciel artisan, ce qu'il faut regarder avant de s'engager, et comment tester un outil sans prendre de risque.
+
+- [Meilleur logiciel artisan](https://logiciel-artisan.fr/meilleur-logiciel-artisan)
+  Critères concrets pour choisir un logiciel adapté à un artisan du BTP en 2026 : simplicité, mobile, centralisation des demandes, suivi client.
+
+## Logiciels par métier
+
+- [Logiciel électricien](https://logiciel-artisan.fr/logiciel-electricien)
+  Spécificités d'un logiciel pour électricien : gestion des dépannages, interventions courtes, suivi des chantiers de rénovation et de neuf.
+
+- [Logiciel chauffagiste](https://logiciel-artisan.fr/logiciel-chauffagiste)
+  Usages utiles pour un chauffagiste : contrats d'entretien, urgences hivernales, suivi des installations et des visites.
+
+- [Logiciel menuisier](https://logiciel-artisan.fr/logiciel-menuisier)
+  Préparation de devis détaillés, suivi entre atelier et chantier, gestion des poses chez le client.
+
+- [Logiciel peintre](https://logiciel-artisan.fr/logiciel-peintre)
+  Devis au m², suivi chantier, photos avant/après et organisation des passages pour les peintres en bâtiment.
+
+- [Logiciel couvreur](https://logiciel-artisan.fr/logiciel-couvreur)
+  Urgences toiture, suivi des chantiers météo-dépendants, photos en hauteur centralisées par dossier.
+
+- [Logiciel maçon](https://logiciel-artisan.fr/logiciel-macon)
+  Suivi des chantiers gros œuvre, étapes d'avancement, métrés et coordination des équipes sur le terrain.
+
+- [Logiciel carreleur](https://logiciel-artisan.fr/logiciel-carreleur)
+  Devis au m², suivi des poses, gestion des matériaux et organisation des chantiers de carrelage.
+
+## Automatisation & IA dans le BTP
+
+- [Automatisation & IA dans le BTP](https://logiciel-artisan.fr/automatisation-ia-btp)
+  Tour d'horizon des usages concrets de l'automatisation et de l'IA pour les artisans : centralisation des demandes, préparation administrative, suivi chantier.
+
+- [IA pour artisans](https://logiciel-artisan.fr/ia-pour-artisans)
+  Comment l'IA peut réellement aider un artisan : analyse de photos, transcription de notes vocales, aide à la rédaction, sans promesses irréalistes.
+
+- [Automatiser les devis artisan](https://logiciel-artisan.fr/automatiser-devis-artisan)
+  Quelles étapes du devis on peut automatiser raisonnablement (reprise d'infos client, listes de matériel, mise en forme) et lesquelles restent du métier de l'artisan.
+
+- [Automatiser les relances clients](https://logiciel-artisan.fr/automatiser-relances-clients)
+  Mettre en place des relances de devis et de factures, sans devenir agressif ni perdre le lien humain avec le client.
+
+- [Automatiser l'administratif artisan](https://logiciel-artisan.fr/automatiser-administratif-artisan)
+  Identifier les tâches répétitives qui mangent du temps et les réduire grâce à de l'automatisation simple, sans empiler les outils.
+
+- [IA et suivi de chantier](https://logiciel-artisan.fr/ia-suivi-chantier)
+  Usages réalistes de l'IA pour fiabiliser un suivi de chantier : organiser photos et notes vocales, préparer des comptes-rendus, retrouver l'info rapidement.
+
+## À propos
+
+- [Bulbiz : avis et présentation](https://logiciel-artisan.fr/bulbiz-avis)
+  Présentation honnête de Bulbiz : ce qu'il fait (centraliser les demandes, structurer l'administratif, aider à préparer devis et suivi) et ce qu'il ne fait pas (ce n'est ni un ERP, ni un logiciel de comptabilité).
+
+- [FAQ](https://logiciel-artisan.fr/faq)
+  Réponses aux questions fréquentes sur les logiciels artisan, l'usage mobile et le fonctionnement d'un assistant administratif terrain comme Bulbiz.
+
+- [Site produit Bulbiz](https://bulbiz.io)
+  Site officiel de la solution Bulbiz.
+
+- [Essayer Bulbiz](https://app.bulbiz.io)
+  Accès à l'application pour tester gratuitement.
+
+## Optional
+
+- [Mentions légales](https://logiciel-artisan.fr/mentions-legales)
+- [Politique de confidentialité](https://logiciel-artisan.fr/politique-de-confidentialite)
